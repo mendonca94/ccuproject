@@ -552,8 +552,8 @@ pre {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
@@ -11832,7 +11832,7 @@ textarea.parsley-success:focus {
 /* -------------------------------------------- */
 .slim-header {
   width: 100%;
-  height: 75px;
+  height: 55px;
   display: flex;
   align-items: center;
   background-color: #fff;
@@ -12439,7 +12439,7 @@ textarea.parsley-success:focus {
       display: block; }
   .slim-navbar .nav-link {
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 8px;
     letter-spacing: .7px;
     font-weight: 500;
     color: #656d75;
@@ -12904,24 +12904,34 @@ textarea.parsley-success:focus {
 .slim-footer {
   border-top: 1px solid #ced4da;
   background-color: #e3e7eb;
-  margin-top: 30px;
-  padding: 15px 0; }
+  /*margin-top: 30px;*/
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;}
   @media (min-width: 992px) {
     .slim-footer {
       margin-top: 50px;
-      padding: 0; } }
+      padding: 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;} }
   .slim-footer .container,
   .slim-footer .container-fluid {
     font-size: 13px;
-    text-align: center; }
+    text-align: center; 
+    width: 100%; }
     @media (min-width: 768px) {
       .slim-footer .container,
       .slim-footer .container-fluid {
-        height: 60px;
+        height: 70px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        text-align: left; } }
+        text-align: left;
+        width: 100%;} }
     .slim-footer .container p,
     .slim-footer .container-fluid p {
       margin-bottom: 0; }
@@ -12932,6 +12942,43 @@ textarea.parsley-success:focus {
     .slim-footer .container-fluid {
       padding-left: 25px;
       padding-right: 25px; } }
+
+
+
+/* CUSTOM STYLES FOR FIXED FOOTER */
+
+.slim-footer ul.nav {
+  width: 100%;
+  height: 70px;
+}
+
+.slim-footer .slim-navbar { /* custom style for including slim navbar elements inside footer */
+  height: 70px;
+  padding: 0;
+}
+
+.slim-footer .slim-navbar .nav-link { /* formatting footer nav elements */
+  height: 70px;
+  border-top: 0;
+  padding-top: 40px;
+}
+
+.slim-footer .container {
+  height: 70px;
+  padding: 0;
+}
+
+.iconwallet {
+}
+.iconmap {}
+.iconprize {}
+.iconprofile {
+  background: url('../img/profile-act.png')no-repeat;
+  background-position: 50% 40%;
+}
+
+
+
 
 /* ------------------------------------------ */
 /* ############### FULL WIDTH ############### */
@@ -41127,3 +41174,23 @@ a.hover-white-8:hover, a.hover-white-8:focus {
 
 .mx-wd-1350 {
   max-width: 1350px; }
+
+
+
+/* ------------------------------------------------- */
+/* ################# Custom Styles ################# */
+/* ------------------------------------------------- */
+
+.header-text {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.logo-image {
+  width: 10%;
+  height: 10%;
+  margin-right: 3%;
+}
