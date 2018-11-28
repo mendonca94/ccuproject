@@ -2,12 +2,12 @@
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(https://bootstraptemplatedesign.com/demo-application/mobileux/4-Bootstrap_magazine-html/vendor/materializeicon/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: url(resources/MaterialIcons-Regular.eot); /* For IE6-8 */
   src: local('Material Icons'),
        local('MaterialIcons-Regular'),
-       url(https://bootstraptemplatedesign.com/demo-application/mobileux/4-Bootstrap_magazine-html/vendor/materializeicon/MaterialIcons-Regular.woff2) format('woff2'),
-       url(https://bootstraptemplatedesign.com/demo-application/mobileux/4-Bootstrap_magazine-html/vendor/materializeicon/MaterialIcons-Regular.woff) format('woff'),
-       url(https://bootstraptemplatedesign.com/demo-application/mobileux/4-Bootstrap_magazine-html/vendor/materializeicon/MaterialIcons-Regular.ttf) format('truetype');
+       url(resources/MaterialIcons-Regular.woff2) format('woff2'),
+       url(resources/MaterialIcons-Regular.woff) format('woff'),
+       url(resources/MaterialIcons-Regular.ttf) format('truetype');
 }
 
 .material-icons {
