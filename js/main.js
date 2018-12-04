@@ -125,7 +125,7 @@ function timer(bID, _bID, time){
 		  clearInterval(x);
 		  ...
 		}*/
-	}, 1000);
+	}, 1000);}
 function searchPath(){
     var selectorFrom = document.getElementById('searchPath_from');
     var valueFrom = selectorFrom[selectorFrom.selectedIndex].value;
