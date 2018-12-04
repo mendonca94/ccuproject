@@ -44,7 +44,8 @@
 html,
 body {
     height: 100%;
-    overflow: hidden
+    overflow: hidden;
+    -webkit-user-select: none;
 }
 body {
     font-size: 14px;
@@ -725,12 +726,16 @@ header a {
 .ios .color-theme-blue .fullscreen-menu,
 .md .color-theme-blue .sidebar,
 .md .color-theme-blue .fullscreen-menu,
-.md .color-theme-blue header,
+.md .color-theme-blue header {
+    background: #1283f6;
+}
+
 .color-theme-blue .circle-background:before,
 .color-theme-blue .triangle-background:before,
 .color-theme-blue .triangle-background:after {
-    background: #1283f6;
+    background: rgba(18,131,246, 0.15);
 }
+
 .ios .color-theme-blue header {
     color: #1283f6;
     background: #ffffff
@@ -2601,4 +2606,18 @@ body .wrapper .page .footer {
         line-height: 60px;
         min-width: 100px;
     }
+}
+
+.spliter{
+	height: .5px;
+	background: black;
+	margin-top: 10px;	
+	margin-bottom: 10px;
+}
+
+.cartoes{
+	display: none;
+#searchPath_result{
+    margin-top:25px;
+    border-top: 1px solid lightgray;
 }
