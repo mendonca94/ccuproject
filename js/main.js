@@ -109,7 +109,7 @@ function searchPath(){
     var result = $("#searchPath_result");
     
     if (valueFrom=="Trindade" && valueTo=="Estádio do Dragão"){
-        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z2 (1.20€)</label>");
+        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z2 (1.20€)</label><image src='img/C1_mapa.png'>");
     } else if (valueFrom=="Trindade" && valueTo=="Fórum da Maia"){
         result.html("<label>Para o trajeto selecionado, deve utilizar um título Z3 (1.60€)</label>");
     } else if (valueFrom=="Trindade" && valueTo=="Santa Clara"){
