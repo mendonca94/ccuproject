@@ -98,3 +98,35 @@ $(document).ready(function () {
 $(window).on('load', function() {
     $('.loader').remove();
 });
+
+function searchPath(){
+    var selectorFrom = document.getElementById('searchPath_from');
+    var valueFrom = selectorFrom[selectorFrom.selectedIndex].value;
+
+    var selectorTo = document.getElementById('searchPath_to');
+    var valueTo = selectorTo[selectorTo.selectedIndex].value;
+
+    var result = $("#searchPath_result");
+    
+    if (valueFrom=="Trindade" && valueTo=="Estádio do Dragão"){
+        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z2 (1.20€)</label>");
+    } else if (valueFrom=="Trindade" && valueTo=="Fórum da Maia"){
+        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z3 (1.60€)</label>");
+    } else if (valueFrom=="Trindade" && valueTo=="Santa Clara"){
+        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z6 (2.80€)</label>");
+    
+    } else if (valueFrom=="São Bento" && valueTo=="Fórum da Maia"){
+        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z3 (1.60€)</label>");
+    } else if (valueFrom=="São Bento" && valueTo=="Santa Clara"){
+        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z6 (2.80€)</label>");
+    } else if (valueFrom=="São Bento" && valueTo=="Estádio do Dragão"){
+        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z2 (1.20€)</label>");
+    
+    } else if (valueFrom=="Pólo Universitário" && valueTo=="Santa Clara"){
+        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z5 (2.40€)</label>");
+    } else if (valueFrom=="Pólo Universitário" && valueTo=="Fórum da Maia"){
+        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z2 (1.20€)</label>");
+    } else if (valueFrom=="Pólo Universitário" && valueTo=="Estádio do Dragão"){
+        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z2 (1.20€)</label>");
+    }
+}
