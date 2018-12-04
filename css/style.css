@@ -2602,3 +2602,8 @@ body .wrapper .page .footer {
         min-width: 100px;
     }
 }
+
+#searchPath_result{
+    margin-top:25px;
+    border-top: 1px solid lightgray;
+}

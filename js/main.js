@@ -109,24 +109,31 @@ function searchPath(){
     var result = $("#searchPath_result");
     
     if (valueFrom=="Trindade" && valueTo=="Estádio do Dragão"){
-        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z2 (1.20€)</label><image src='img/C1_mapa.png'>");
+        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z2</label><button onclick='decreaseAmount(1.20)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (1.20€)</button><image style='float:none' src='img/C1_mapa.png'>");
     } else if (valueFrom=="Trindade" && valueTo=="Fórum da Maia"){
-        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z3 (1.60€)</label>");
+        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z3</label><button onclick='decreaseAmount(1.60)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (1.60€)</button><image style='float:none' src='img/C1_mapa.png'>");
     } else if (valueFrom=="Trindade" && valueTo=="Santa Clara"){
-        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z6 (2.80€)</label>");
+        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z6</label><button onclick='decreaseAmount(2.80)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (2.80€)</button><image style='float:none' src='img/C1_mapa.png'>");
     
     } else if (valueFrom=="São Bento" && valueTo=="Fórum da Maia"){
-        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z3 (1.60€)</label>");
+        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z3</label><button onclick='decreaseAmount(1.60)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (1.60€)</button><image style='float:none' src='img/C1_mapa.png'>");
     } else if (valueFrom=="São Bento" && valueTo=="Santa Clara"){
-        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z6 (2.80€)</label>");
+        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z6</label><button onclick='decreaseAmount(2.80)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (2.80€)</button><image style='float:none' src='img/C1_mapa.png'>");
     } else if (valueFrom=="São Bento" && valueTo=="Estádio do Dragão"){
-        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z2 (1.20€)</label>");
+        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z2</label><button onclick='decreaseAmount(1.20)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (1.20€)</button><image style='float:none' src='img/C1_mapa.png'>");
     
     } else if (valueFrom=="Pólo Universitário" && valueTo=="Santa Clara"){
-        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z5 (2.40€)</label>");
+        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z5</label><button onclick='decreaseAmount(2.40)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (2.40€)</button><image style='float:none' src='img/C6_mapa.png'>");
     } else if (valueFrom=="Pólo Universitário" && valueTo=="Fórum da Maia"){
-        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z2 (1.20€)</label>");
+        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z2</label><button onclick='decreaseAmount(1.20)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (1.20€)</button><image style='float:none' src='img/C6_mapa.png'>");
     } else if (valueFrom=="Pólo Universitário" && valueTo=="Estádio do Dragão"){
-        result.html("<label>Para o trajeto selecionado, deve utilizar um título Z2 (1.20€)</label>");
+        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z2</label><button onclick='decreaseAmount(1.20)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (1.20€)</button><image style='float:none' src='img/C6_mapa.png'>");
     }
+}
+
+function decreaseAmount(value){
+    var total_amountLabel = $("#total_amount");
+    var currentAmount = parseFloat(total_amountLabel.text()).toFixed(2);
+    var newValue = parseFloat(currentAmount - value).toFixed(2);
+    total_amountLabel.html(newValue + "€");
 }
