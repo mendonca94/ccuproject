@@ -211,6 +211,7 @@
                                     <div class="swiper-slide">
                                         <div class="block-slide">
                                             <figure class="m-0 news-pic">
+                                                
                                                 <img src="img/passes/2.png" alt="" class="w-100" data-toggle="modal" data-target="#purchased">
                                                 <figcaption>Bilhete de Zona Z2</figcaption>
                                             </figure>
@@ -491,7 +492,7 @@
             <div class="page-content triangle-background">
                 <nav class="tabber tabber-bottom publish-tabs">
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link" id="nav-find-tab" data-toggle="tab" href="#nav-find" role="tab" aria-controls="nav-find" aria-selected="true">
+                        <a class="nav-item nav-link" id="nav-find-tab" data-toggle="tab" href="#nav-find" role="tab" aria-controls="nav-find" aria-selected="false">
                             <!-- Different icons for iOS and MD themes -->
                             <i class="icon material-icons">shopping_cart</i>
                             <small>Comprar</small>
@@ -500,7 +501,7 @@
                             <i class="icon material-icons">map</i>
                             <small>Mapa</small>
                         </a>
-                        <a class="nav-item nav-link publish-tabs-link" id="nav-wallet-tab" data-toggle="tab" href="#nav-wallet" role="tab" aria-controls="nav-wallet" aria-selected="false">
+                        <a class="nav-item nav-link publish-tabs-link" id="nav-wallet-tab" data-toggle="tab" href="#nav-wallet" role="tab" aria-controls="nav-wallet" aria-selected="true">
                             <i class="icon material-icons button-glow-red gradient-red" id="wallet-icon">account_balance_wallet</i>
                         </a>
                         <a class="nav-item nav-link" id="nav-cart-tab" data-toggle="tab" href="#nav-cart" role="tab" aria-controls="nav-cart" aria-selected="false">
@@ -517,17 +518,6 @@
                 <div class="tab-content h-100" id="nav-tabContent">
                     <div class="tab-pane fade" id="nav-find" role="tabpanel" aria-labelledby="nav-find-tab">
                         <div class="content-sticky-footer">
-                            <div class="row m-0" style="background: white; height: 40px;">
-                            	<div style="width:49%; float: left;">
-	                                <label style="float: left; padding: 4% 0% 4% 2%;">SALDO:&nbsp;</label>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label id="total_amount" style="float: left; padding: 4% 0% 4% 0%;">10.00€</label>
-                            	</div>
-                            	<div style="width:51%; float:right; text-align:right;">
-                            		<a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#fullscreenaddamount" style="padding:0px;">
-                                		<img src="img/plus.png" alt="" style="width:30px; height:30px; margin-top:5px;">
-                            		</a>
-                                </div>
-                            </div>
                             
                             <h2 class="block-title color-dark">Bilhetes sugeridos</h2>
                             <div class="carosel">
@@ -537,6 +527,7 @@
                                         <div class="swiper-slide">
                                             <div class="block-slide">
                                                 <figure class="m-0 news-pic">
+                                                    <div class="suggestion like-heart"><i class="fas fa-atom"></i></div>
                                                     <img src="img/passes/2.png" alt="" class="w-100" data-toggle="modal" data-target="#purchased">
                                                     <figcaption>Bilhete de Zona Z2</figcaption>
                                                 </figure>
@@ -568,6 +559,7 @@
                                         <div class="swiper-slide">
                                             <div class="block-slide">
                                                 <figure class="m-0 news-pic">
+                                                    <div class="suggestion like-heart"><i class="fas fa-atom"></i></div>
                                                     <img src="img/passes/3.png" alt="" class="w-100">
                                                     <figcaption>Bilhete de Zona D10</figcaption>
                                                 </figure>
@@ -734,14 +726,13 @@
                         </div>
                     </div>
 
-                    
+
                     <!-- SECOND TAB: MAP -->
                     <div class="tab-pane fade" id="nav-favorite" role="tabpanel" aria-labelledby="nav-favorite-tab">
                         <div class="content-sticky-footer">
                             <h2 class="block-title color-dark">TO BE IMPLEMENTED!</h2>
                         </div>
                     </div>
-
 
                     <!-- MAIN TAB: WALLET -->
                     <div class="tab-pane fade show active" id="nav-wallet" role="tabpanel" aria-labelledby="nav-wallet-tab">
@@ -777,7 +768,7 @@
                                                     </div>
                                                     
                                                     <img src="img/passes/3.png" alt="" class="w-100" data-toggle="modal" data-target="#purchased">
-                                                    <figcaption>Assinatura Andante Z2</figcaption>
+                                                    <figcaption><b>Zona Z2</b><br><small>Assinatura Mensal Andante</small></figcaption>
                                                 </figure>
                                                 <div class="card card-data-item">
                                                     <div class="card-footer pt-0">
@@ -798,14 +789,16 @@
                                         <div class="swiper-slide">
                                             <div class="block-slide">
                                                 <figure class="m-0 news-pic">
-                                                        <div class="validateExpand button-glow-red like-heart flash" id="passe-2" data-toggle="modal" href="#validateModal" onclick="startTimerP2()">
-                                                            <i class="icon material-icons">done</i> VALIDAR
-                                                        </div>
-                                                        <div class="validated button-glow-green like-heart" id="passe-2-count" data-toggle="modal" href="#validateModal">
-                                                            <i class="icon material-icons">done</i> <span id="timerP2"></span>
-                                                        </div>
+                                                    <div class="validateExpand button-glow-red like-heart flash" id="passe-2" data-toggle="modal" href="#validateModal" onclick="startTimerP2()">
+                                                        <i class="icon material-icons">done</i> VALIDAR
+                                                    </div>
+
+                                                    <div class="validated button-glow-green like-heart" id="passe-2-count" data-toggle="modal" href="#validateModal">
+                                                        <i class="icon material-icons">done</i> <span id="timerP2"></span>
+                                                    </div>
+
                                                     <img src="img/passes/3.png" alt="" class="w-100">
-                                                    <figcaption>Assinatura Andante Z4</figcaption>
+                                                    <figcaption><b>Zona Z4</b><br><small>Assinatura Mensal Andante</small></figcaption>
                                                 </figure>
                                                 <div class="card card-data-item">
                                                     <div class="card-footer pt-0">
@@ -827,8 +820,8 @@
                                 </div>
                             </div>
                             
-                            <h2 class="block-title color-dark">Os seus bilhetes individuais</h2>
-                            <div class="carosel">
+                            <h2 class="block-title color-dark">Os seus títulos ocasionais</h2>
+                            <div class="carosel mb-5">
                                 <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="30" data-slides-per-view="1" class="swiper-container swiper-init swipermultiple news-carousel mb-2">
                                     <div class="swiper-pagination"></div>
                                     <div class="swiper-wrapper">
@@ -843,14 +836,14 @@
                                                     </div>
                                                     
                                                     <img src="img/passes/2.png" alt="" class="w-100" data-toggle="modal" data-target="#purchased">
-                                                    <figcaption>Assinatura Andante Z2</figcaption>
+                                                    <figcaption><b>Zona C2</b><br><small>Título Ocasional</small></figcaption>
                                                 </figure>
                                                 <div class="card card-data-item">
                                                     <div class="card-footer pt-0">
                                                         <div class="row">
                                                             <div class="col-auto">
-                                                                <a href=""><i class="fas fa-history" style="color: #007bff;"></i>
-                                                                <span class="post-seconds text-blue">Histórico</span></a>
+                                                                <i class="fas fa-ticket-alt"></i>
+                                                                <span class="post-seconds text-dark">3 unidades</span>
                                                             </div>
                                                             <div class="col text-right">
                                                                 <span class="post-seconds"><span>Validade:</span> 28/12/2018</span>
@@ -871,14 +864,14 @@
                                                             <i class="icon material-icons">done</i> <span id="timerB2"></span>
                                                         </div>
                                                     <img src="img/passes/2.png" alt="" class="w-100">
-                                                    <figcaption>Assinatura Andante Z4</figcaption>
+                                                    <figcaption><b>Zona C5</b><br><small>Título Ocasional</small></figcaption>
                                                 </figure>
                                                 <div class="card card-data-item">
                                                     <div class="card-footer pt-0">
                                                         <div class="row">
                                                             <div class="col-auto">
-                                                                <a href=""><i class="fas fa-history" style="color: #007bff;"></i>
-                                                                <span class="post-seconds text-blue">Histórico</span></a>
+                                                                <i class="fas fa-ticket-alt"></i>
+                                                                <span class="post-seconds text-dark">2 unidades</span>
                                                             </div>
                                                             <div class="col text-right">
                                                                 <span class="post-seconds"><span>Validade:</span> 28/12/2018</span>
@@ -889,13 +882,39 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="swiper-slide">
+                                                <div class="block-slide">
+                                                    <figure class="m-0 news-pic">
+                                                            <div class="validateExpand button-glow-red like-heart flash" id="bilhete-2" data-toggle="modal" href="#validateModal" onclick="startTimerB2()">
+                                                                <i class="icon material-icons">done</i> VALIDAR
+                                                            </div>
+                                                            <div class="validated button-glow-green like-heart" id="bilhete-2-count" data-toggle="modal" href="#validateModal">
+                                                                <i class="icon material-icons">done</i> <span id="timerB3"></span>
+                                                            </div>
+                                                        <img src="img/passes/2.png" alt="" class="w-100">
+                                                        <figcaption><b>Zona C7</b><br><small>Título Ocasional</small></figcaption>
+                                                    </figure>
+                                                    <div class="card card-data-item">
+                                                        <div class="card-footer pt-0">
+                                                            <div class="row">
+                                                                <div class="col-auto">
+                                                                    <i class="fas fa-ticket-alt"></i>
+                                                                    <span class="post-seconds text-dark">1 unidade</span>
+                                                                </div>
+                                                                <div class="col text-right">
+                                                                    <span class="post-seconds"><span>Validade:</span> 28/12/2018</span>
+                                                                    <i class="material-icons text-grey">event</i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
 
                     <!-- TAB 3: TAB PONTOS -->
                     <div class="tab-pane fade" id="nav-cart" role="tabpanel" aria-labelledby="nav-cart-tab">
@@ -1712,6 +1731,27 @@
             document.getElementById('timerB2').innerHTML =
                 m + ":" + s;
             setTimeout(startTimerB2, 1000);
+        }
+
+        document.getElementById('timerB3').innerHTML = 60 + ':' + '00';
+
+        function startTimerB3() {
+            document.getElementById("bilhete-2").style.display = "none";
+            document.getElementById("bilhete-2-count").style.display = "flex";
+            document.getElementById("wallet-icon").classList.remove("button-glow-red");
+            document.getElementById("wallet-icon").classList.remove("gradient-red");
+            document.getElementById("wallet-icon").classList.add("button-glow-green");
+            document.getElementById("wallet-icon").classList.add("gradient-green");
+            var presentTime = document.getElementById('timerB3').innerHTML;
+            var timeArray = presentTime.split(/[:]+/);
+            var m = timeArray[0];
+            var s = checkSecond((timeArray[1] - 1));
+            if(s==59){m=m-1}
+            //if(m<0){alert('timer completed')}
+            
+            document.getElementById('timerB3').innerHTML =
+                m + ":" + s;
+            setTimeout(startTimerB3, 1000);
         }
 
 
