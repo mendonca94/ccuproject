@@ -2779,3 +2779,9 @@ width: 300px;
 #bilhete-1-count, #bilhete-2-count {
     display: none;
 }
+
+#saldovalue {
+    display: none;
+}
+
+

@@ -1,6 +1,39 @@
 "use strict";
 $(document).ready(function () {
+
+
+
+    //  redeem button on profile menu
+    $("#redeembutton").on('click', function () {
+        var value = $('#saldovalue').html();
+        var flvalue = parseFloat(value);
+
+        var newval = flvalue + 15.00;
+        $('#saldovalue').html(newval);
+        $('.current-saldo').html(newval);
+    });
+
+
+    // redeem button on gamification tab
+    $("#redeemcode").on('click', function () {
+        var value = $('#saldovalue').html();
+        var flvalue = parseFloat(value);
+        
+        var newval = flvalue + 15.00;
+        $('#saldovalue').html(newval);
+        $('.current-saldo').html(newval);
+    });
             
+
+
+
+
+
+
+
+
+
+
     /* sidebar left  expand collapase */
     $('.menu-left').on('click', function () {
         $('body').addClass('menu-left-open');
@@ -126,6 +159,8 @@ function timer(bID, _bID, time){
 		  ...
 		}*/
 	}, 1000);}
+
+
 function searchPath(){
 
     var selectorFrom = document.getElementById('searchPath_from');

@@ -32,6 +32,10 @@
     <meta name="mobile-web-app-title" content="Anda">
 
     <title>CCU</title>
+
+
+
+
 </head>
 
 <body class="color-theme-blue push-content-right theme-light">
@@ -931,7 +935,7 @@
                                                             <div class="media">
                                                                 <input type="text" class="form-control" placeholder="Digite o código" aria-label="Digite o código" style="width: 100%;">
                                                                 <div class="input-group-append">
-                                                                    <button class="btn btn-primary" data-toggle="modal" data-target="#publish"  type="button">OK</button>
+                                                                    <button class="btn btn-primary" id="redeemcode" data-toggle="modal" data-target="#publish"  type="button">OK</button>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -1386,7 +1390,8 @@
                                         <div class="input-group mb-3">
                                             <input type="text" class="form-control" placeholder="Digite o código" aria-label="Digite o código">
                                             <div class="input-group-append">
-                                                <button class="btn btn-primary" data-toggle="modal" data-target="#publish"  type="button">Resgatar</button>
+                                                <div id="saldovalue"> 10.00</div>
+                                                <button class="btn btn-primary" id="redeembutton" data-toggle="modal" data-target="#publish" type="button">Resgatar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -1399,7 +1404,7 @@
                                     <a class="like-heart text-blue"><i class="icon material-icons text-dark">euro_symbol</i></a>
                                     
                                     <h4 class="title-small-carousel">Saldo</h4>
-                                    <h1>19,40 €</h1>
+                                    <h1><span class="current-saldo">10.00</span> €</h1>
 
                                     <div class="gaugewrap">
                                         <h2 class="title-number-carousel"><small><a href="#">Ver carregamentos »</a></small></h2>
@@ -1492,7 +1497,7 @@
                     <h3 class="mt-2 text-white text-center" style="width: 100%">Código resgatado!</h3>
                 </div>
                 <div class="modal-body text-center text-white">
-                    <p>Foram adicionados 15,00 € ao saldo da sua conta. O seu saldo é agora 19,40 €.</p>
+                    <p>Foram adicionados 15.00€ ao saldo da sua conta. O seu saldo é agora <span class="current-saldo"></span>€.</p>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-light btn-block col" data-dismiss="modal" data-toggle="collapse" href="#redeem">Fechar</button>
@@ -1713,6 +1718,14 @@
                 m + ":" + s;
             setTimeout(startTimerB2, 1000);
         }
+
+        
+
+
+        
+
+
+
 
 
     </script>
