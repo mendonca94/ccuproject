@@ -21,7 +21,9 @@
     <link id="theme" rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-
+    <meta property="og:title" content="Anda" />
+    <meta property="og:url" content="http://web.tecnico.ulisboa.pt/~ist181943/ccu/ccuproject/login.html" />
+    <meta property="og:image" content="http://web.tecnico.ulisboa.pt/~ist181943/ccu/ccuproject/img/passes/2.png" />
 
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -505,11 +507,11 @@
                             <i class="icon material-icons">map</i>
                             <small>Mapa</small>
                         </a>
-                        <a class="nav-item nav-link publish-tabs-link" id="nav-wallet-tab" data-toggle="tab" href="#nav-wallet" role="tab" aria-controls="nav-wallet" aria-selected="true">
 
+                        <a class="nav-item nav-link publish-tabs-link active show" id="nav-find-tab" data-toggle="tab" href="#nav-wallet" role="tab" aria-controls="nav-wallet" aria-selected="true">
                             <i class="fas fa-wallet button-glow-red gradient-red" id="wallet-icon"></i>
-
                         </a>
+
                         <a class="nav-item nav-link" id="nav-cart-tab" data-toggle="tab" href="#nav-cart" role="tab" aria-controls="nav-cart" aria-selected="false">
                             <i class="icon material-icons fas fa-trophy" style="font-size: 18px;"><span class="badge color-blue">4</span></i>
                             <small>Pontos</small>
@@ -526,11 +528,11 @@
                         <div class="content-sticky-footer">
                             
 
-                            <h2 class="block-title color-dark">Adquirir Bilhete</h2>
+                            <h2 class="block-title color-dark">Comprar título ocasional</h2>
                             <div class="col-12 w-100">
                                 <div class="card mb-3 wizard my-3">
                                     <div class="row mt-3 mx-3">
-                                        <p>Seleccione Origem e Destino:</p>
+                                        <p>Selecione a origem e o destino.</p>
                                     </div>
                                     <div class="row mx-1 mt-0">
                                         <div id ="col">
@@ -540,7 +542,7 @@
                                                     <option>São Bento</option>
                                                     <option>Trindade</option>
                                                 </select>
-
+                                                <span class="arrow-dir"><i class="fas fa-arrow-right"></i></span>
                                                 <select id="searchPath_to" class="form-control small-form-control" id="exampleFormControlSelect1">
                                                     <option>Estádio do Dragão</option>
                                                     <option>Fórum da Maia</option> 
@@ -1325,7 +1327,7 @@
                                         <div class="input-group mb-3">
                                             <input type="text" class="form-control" placeholder="Digite o código" aria-label="Digite o código">
                                             <div class="input-group-append">
-                                                <div id="saldovalue"> 10.00</div>
+                                                <div id="saldovalue">10.91</div>
                                                 <button class="btn btn-primary" id="redeembutton" data-toggle="modal" data-target="#publish" type="button">Resgatar</button>
                                             </div>
                                         </div>
@@ -1339,7 +1341,7 @@
                                     <a class="like-heart text-blue"><i class="icon material-icons text-dark">euro_symbol</i></a>
                                     
                                     <h4 class="title-small-carousel">Saldo</h4>
-                                    <h1><span class="current-saldo">10.00</span> €</h1>
+                                    <h1><span class="current-saldo">10.91</span> €</h1>
 
                                     <div class="gaugewrap">
                                         <h2 class="title-number-carousel"><small><a href="#">Ver carregamentos »</a></small></h2>
@@ -1432,7 +1434,7 @@
                     <h3 class="mt-2 text-white text-center" style="width: 100%">Código resgatado!</h3>
                 </div>
                 <div class="modal-body text-center text-white">
-                    <p>Foram adicionados 15.00€ ao saldo da sua conta. O seu saldo é agora <span class="current-saldo"></span>€.</p>
+                    <p>Foram adicionados 15.00 € ao saldo da sua conta. O seu saldo é agora <span class="current-saldo"></span> €.</p>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-light btn-block col" data-dismiss="modal" data-toggle="collapse" href="#redeem">Fechar</button>

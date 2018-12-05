@@ -51,6 +51,9 @@ body {
     font-size: 14px;
     color: #666666;
 }
+select {
+    -webkit-appearance: none;
+}
 .wrapper {
     height: 100%;
     width: 100%;
@@ -2421,7 +2424,7 @@ body .wrapper .page .footer {
     display: inline-block;
     vertical-align: middle;
     font-size: 50px;
-    color: #ffffff;
+    color: #FFF;
     height: 100px;
     line-height: 80px;
     margin-top: 0px;
@@ -2432,6 +2435,9 @@ body .wrapper .page .footer {
     -moz-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.15);
     -webkit-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.15);
     max-width: 100px;
+}
+.tabber.publish-tabs a.publish-tabs-link.active i {
+    color: #e6e6e6;
 }
 .news-carousel .card {
     margin: 0;
@@ -2638,6 +2644,15 @@ smaller text on forms
 formats search button appropriately
 
 */
+
+.arrow-dir {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
 
 .search-button {
     width: 50px;
