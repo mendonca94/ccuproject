@@ -2655,10 +2655,7 @@ formats search button appropriately
     position: relative;
 }
 
-#searchPath_result{
-    margin-top:25px;
-    border-top: 1px solid lightgray; 
-}
+
 
 @keyframes glowingGreen {
     0% { box-shadow: 0 0 -10px rgb(0, 196, 115); }
@@ -2776,5 +2773,9 @@ width: 300px;
 }
 
 #passe-2-count {
+    display: none;
+}
+
+#bilhete-1-count, #bilhete-2-count {
     display: none;
 }
