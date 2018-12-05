@@ -76,7 +76,7 @@
                             <a href="#" class="sidebar-close dropdown-item menu-right">
                              Push Content
                             </a>
-                            <a href="javascript:void(0)" class="sidebar-close dropdown-item popup-open" data-toggle="modal" data-target="#fullscreenmenu">
+                            <a href="javascript:void(0)" class="sidebar-close dropdown-item popup-open" data-toggle="modal" data-target="#validateModal">
                              Full Screen
                             </a>
                         </div>
@@ -179,9 +179,21 @@
         </div>
         <!-- sidebar right ends -->
 
-        <!-- fullscreen menu start -->
 
-        <div class="modal fade popup-fullmenu" id="fullscreenmenu" tabindex="-1" role="dialog" aria-hidden="true">
+
+
+
+
+
+
+
+
+
+        <!-- FULLSCREEN MODALS -->
+
+
+        <!-- FULLSCREEN MODAL 1: WALLET - START -->
+        <div class="modal fade popup-fullmenu" id="walletModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content fullscreen-menu">
                     <div class="modal-header">
@@ -189,115 +201,9 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+                    
                     <div class="modal-body">
-                        <a href="../../../profile/index.html" class="block user-fullmenu popup-close">
-                            <figure>
-                                <img src="img/g.png" alt="">
-                            </figure>
-                            <div class="media-content">
-                                <h6>Gonçalo Matos<br><small>1029 pontos</small></h6>
-                            </div>
-                        </a>
-                        <br>
-                        <div class="row mx-0">
-                            <div class="col">
-                                <img src="img/validate.gif" style="margin-top: 50px; margin-bottom: 5px;" height="150px"/><br>
-                                <p style="margin-bottom: 70px;">Aproxime o telemóvel do validador</p>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row mx-0">
-                            <div class="col">
-                                <a class="rounded btn btn-outline-white text-white popup-close" data-dismiss="modal" aria-label="Close">Cancelar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- fullscreen menu ends -->
-        
-        <!-- addAmount form start -->
-
-        <div class="modal fade popup-fullmenu" id="fullscreenaddamount" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content fullscreen-menu">
-                    <div class="modal-header">
-                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- addAmount form ends -->
-
-        <!-- page main start -->
-        <div class="page">
-            <form class="searchcontrol">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <button type="button" class="input-group-text close-search"><i class="material-icons">keyboard_backspace</i></button>
-                    </div>
-                    <input type="text" class="form-control border-0" placeholder="Search..." aria-label="Username">
-                </div>
-            </form>
-            <header class="row m-0 fixed-header no-shadow">
-                <div class="left">
-                    <a href="javascript:void(0)" class="menu-left"><i class="material-icons">menu</i></a>
-                </div>
-                <div class="col center text-center">
-                    <a href="#" class="logo"> Anda</a>
-                </div>
-                <div class="right">
-                    <a href="javascript:void(0)" class="menu-right"><i class="material-icons">settings</i></a>
-                </div>
-            </header>
-            <div class="page-content triangle-background">
-                <nav class="tabber tabber-bottom publish-tabs">
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-find-tab" data-toggle="tab" href="#nav-find" role="tab" aria-controls="nav-find" aria-selected="true">
-                            <!-- Different icons for iOS and MD themes -->
-                            <i class="icon material-icons">account_balance_wallet</i>
-                            <small>Carteira</small>
-                        </a>
-                        <a class="nav-item nav-link" id="nav-favorite-tab" data-toggle="tab" href="#nav-favorite" role="tab" aria-controls="nav-favorite" aria-selected="false">
-                            <i class="icon material-icons">map</i>
-                            <small>Mapa</small>
-                        </a>
-                        <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#fullscreenmenu">
-                            <i class="icon material-icons gradient-green">done</i>
-                        </a>
-                        <a class="nav-item nav-link" id="nav-cart-tab" data-toggle="tab" href="#nav-cart" role="tab" aria-controls="nav-cart" aria-selected="false">
-                            <i class="icon material-icons fas fa-trophy" style="font-size: 18px;"><span class="badge color-blue">4</span></i>
-                            <small>Pontos</small>
-                        </a>
-                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
-                            <i class="icon material-icons">account_circle</i>
-                            <small>Conta</small>
-                        </a>
-                    </div>
-                </nav>
-                <div class="tab-content h-100" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-find" role="tabpanel" aria-labelledby="nav-find-tab">
-                        <div class="content-sticky-footer">
-                            <div class="row m-0" style="background: white; height: 40px;">
-                            	<div style="width:49%; float: left;">
-	                                <label style="float: left; padding: 4% 0% 4% 2%;">SALDO:&nbsp;</label>
-                                    <label id="total_amount" style="float: left; padding: 4% 0% 4% 0%;">10.00€</label>
-                            	</div>
-                            	<div style="width:51%; float:right; text-align:right;">
-                            		<a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#fullscreenaddamount" style="padding:0px;">
-                                		<img src="img/plus.png" alt="" style="width:30px; height:30px; margin-top:5px;">
-                            		</a>
-                                </div>
-                            </div>
-                            
-                            <h2 class="block-title color-dark">Bilhetes sugeridos</h2>
+                            <h2 class="block-title color-dark">O seu passe mensal</h2>
                             <div class="carosel">
                                 <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="30" data-slides-per-view="1" class="swiper-container swiper-init swipermultiple news-carousel mb-2">
                                     <div class="swiper-pagination"></div>
@@ -381,7 +287,7 @@
                                                 
 
                                                 <div class="spliter"></div>
-                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#fullscreenmenu">
+                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal">
 													<button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112); width:100%" class="btn btn-success">Validar</button>
                                                 </a>
                                         
@@ -407,7 +313,7 @@
                                                 <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
                                                 	<button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
                                                 </a>
-                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#fullscreenmenu" style="float:left; width:47%" onclick="timer('#b1', 'b1', 2)">
+                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b1', 'b1', 2)">
                                                 	<button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
                                                 </a>
                                             </div>
@@ -424,7 +330,7 @@
                                                 <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
                                                 	<button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
                                                 </a>
-                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#fullscreenmenu" style="float:left; width:47%" onclick="timer('#b2', 'b2', 1)">
+                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b2', 'b2', 1)">
                                                 	<button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
                                                 </a>
                                             </div>
@@ -440,7 +346,7 @@
                                                 <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
                                                 	<button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
                                                 </a>
-                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#fullscreenmenu" style="float:left; width:47%" onclick="timer('#b3', 'b3', 1)">
+                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b3', 'b3', 1)">
                                                 	<button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
                                                 </a>
                                             </div>
@@ -456,7 +362,7 @@
                                                 <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
                                                 	<button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
                                                 </a>
-                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#fullscreenmenu" style="float:left; width:47%" onclick="timer('#b4', 'b4', 2.5)">
+                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b4', 'b4', 2.5)">
                                                 	<button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
                                                 </a>
                                             </div>
@@ -473,7 +379,7 @@
                                                 <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
                                                 	<button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
                                                 </a>
-                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#fullscreenmenu" style="float:left; width:47%" onclick="timer('#b5', 'b5', 2.25)">
+                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b5', 'b5', 2.25)">
                                                 	<button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
                                                 </a>
                                             </div>
@@ -490,7 +396,7 @@
                                                 <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
                                                 	<button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
                                                 </a>
-                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#fullscreenmenu" style="float:left; width:47%" onclick="timer('#b6', 'b6', 72)">
+                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b6', 'b6', 72)">
                                                 	<button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
                                                 </a>
                                             </div>
@@ -799,7 +705,337 @@
                             <br>
                         </div>
 
+
+                </div>
+            </div>
+        </div>
+        <!-- FULLSCREEN MODAL 1: WALLET - END -->
+
+
+        <!-- FULLSCREEN MODAL 2: VALIDATE - START -->
+        <div class="modal fade popup-fullmenu" id="validateModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content fullscreen-menu">
+                    <div class="modal-header">
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
+                    <div class="modal-body">
+                        <a href="../../../profile/index.html" class="block user-fullmenu popup-close">
+                            <figure>
+                                <img src="img/g.png" alt="">
+                            </figure>
+                            <div class="media-content">
+                                <h6>Gonçalo Matos<br><small>1029 pontos</small></h6>
+                            </div>
+                        </a>
+                        <br>
+                        <div class="row mx-0">
+                            <div class="col">
+                                <img src="img/validate.gif" style="margin-top: 50px; margin-bottom: 5px;" height="150px"/><br>
+                                <p style="margin-bottom: 70px;">Aproxime o telemóvel do validador</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row mx-0">
+                            <div class="col">
+                                <a class="rounded btn btn-outline-white text-white popup-close" data-dismiss="modal" aria-label="Close">Cancelar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FULLSCREEN MODAL 2: VALIDATE - END -->        
+        
+        
+        <!-- addAmount form start -->
+        <div class="modal fade popup-fullmenu" id="fullscreenaddamount" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content fullscreen-menu">
+                    <div class="modal-header">
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- addAmount form ends -->
+
+
+        <!-- page main start -->
+        <div class="page">
+            <form class="searchcontrol">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <button type="button" class="input-group-text close-search"><i class="material-icons">keyboard_backspace</i></button>
+                    </div>
+                    <input type="text" class="form-control border-0" placeholder="Search..." aria-label="Username">
+                </div>
+            </form>
+            <header class="row m-0 fixed-header no-shadow">
+                <div class="left">
+                    <a href="javascript:void(0)" class="menu-left"><i class="material-icons">menu</i></a>
+                </div>
+                <div class="col center text-center">
+                    <a href="#" class="logo"> Anda</a>
+                </div>
+                <div class="right">
+                    <a href="javascript:void(0)" class="menu-right"><i class="material-icons">settings</i></a>
+                </div>
+            </header>
+            <div class="page-content triangle-background">
+                <nav class="tabber tabber-bottom publish-tabs">
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-find-tab" data-toggle="tab" href="#nav-find" role="tab" aria-controls="nav-find" aria-selected="true">
+                            <!-- Different icons for iOS and MD themes -->
+                            <i class="icon material-icons">shopping_cart</i>
+                            <small>Comprar</small>
+                        </a>
+                        <a class="nav-item nav-link" id="nav-favorite-tab" data-toggle="tab" href="#nav-favorite" role="tab" aria-controls="nav-favorite" aria-selected="false">
+                            <i class="icon material-icons">map</i>
+                            <small>Mapa</small>
+                        </a>
+                        <a class="nav-item nav-link publish-tabs-link" data-toggle="tab" href="#nav-wallet" role="tab" aria-controls="nav-wallet" aria-selected="false">
+                            <i class="icon material-icons button-glow-red gradient-red" id="wallet-icon">account_balance_wallet</i>
+                        </a>
+                        <a class="nav-item nav-link" id="nav-cart-tab" data-toggle="tab" href="#nav-cart" role="tab" aria-controls="nav-cart" aria-selected="false">
+                            <i class="icon material-icons fas fa-trophy" style="font-size: 18px;"><span class="badge color-blue">4</span></i>
+                            <small>Pontos</small>
+                        </a>
+                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
+                            <i class="icon material-icons">account_circle</i>
+                            <small>Conta</small>
+                        </a>
+                    </div>
+                </nav>
+
+                <div class="tab-content h-100" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-find" role="tabpanel" aria-labelledby="nav-find-tab">
+                        <div class="content-sticky-footer">
+                            <div class="row m-0" style="background: white; height: 40px;">
+                            	<div style="width:49%; float: left;">
+	                                <label style="float: left; padding: 4% 0% 4% 2%;">SALDO:&nbsp;</label>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label id="total_amount" style="float: left; padding: 4% 0% 4% 0%;">10.00€</label>
+                            	</div>
+                            	<div style="width:51%; float:right; text-align:right;">
+                            		<a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#fullscreenaddamount" style="padding:0px;">
+                                		<img src="img/plus.png" alt="" style="width:30px; height:30px; margin-top:5px;">
+                            		</a>
+                                </div>
+                            </div>
+                            
+                            <h2 class="block-title color-dark">Bilhetes sugeridos</h2>
+                            <div class="carosel">
+                                <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="30" data-slides-per-view="1" class="swiper-container swiper-init swipermultiple news-carousel mb-2">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="block-slide">
+                                                <figure class="m-0 news-pic">
+                                                    <img src="img/passes/2.png" alt="" class="w-100" data-toggle="modal" data-target="#purchased">
+                                                    <figcaption>Bilhete de Zona Z2</figcaption>
+                                                </figure>
+                                                <div class="card card-data-item">
+                                                    <div class="media my-2 px-3">
+                                                        <a data-toggle="modal" data-target="#purchased" class="media-body">
+                                                            <h5 class="mt-1">Compre um bilhete</h5>
+                                                            <p>Sugestão com base na sua localização</p>
+                                                        </a>
+                                                        <a class="like-heart color-blue" data-toggle="modal" data-target="#purchased">
+                                                            <i class="icon material-icons">shopping_cart</i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="card-footer pt-0">
+                                                        <div class="row">
+                                                            <div class="col-auto">
+                                                                <i class="material-icons text-dark">loyalty</i>
+                                                                <span class="post-seconds">1,25 €</span>
+                                                            </div>
+                                                            <div class="col text-right">
+                                                                <span class="post-seconds"><span>Validade:</span> 28/12/2018</span>
+                                                                <i class="material-icons text-grey">event</i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="block-slide">
+                                                <figure class="m-0 news-pic">
+                                                    <img src="img/passes/3.png" alt="" class="w-100">
+                                                    <figcaption>Bilhete de Zona D10</figcaption>
+                                                </figure>
+                                                <div class="card card-data-item">
+                                                    <div class="media my-2 px-3">
+                                                        <a href="#" class="media-body">
+                                                            <h5 class="mt-1">Compre um bilhete</h5>
+                                                            <p>Sugestão com base na sua última viagem</p>
+                                                        </a>
+                                                        <a class="like-heart color-blue">
+                                                            <i class="icon material-icons">shopping_cart</i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="card-footer pt-0">
+                                                        <div class="row">
+                                                            <div class="col-auto">
+                                                                <i class="material-icons text-dark">loyalty</i>
+                                                                <span class="post-seconds">2,35 €</span>
+                                                            </div>
+                                                            <div class="col text-right">
+                                                                <span class="post-seconds"><span>Validade:</span> 02/12/2018</span>
+                                                                <i class="material-icons text-grey">event</i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="block-title color-dark">Os seus Passes</h2>
+                            <div class="swiper-wrapper">
+                                        <div class="swiper-slide pt-2">
+                                            <div class="swiper-content-block right-block">
+                                                <p class="">PASSE MENSAL</p>
+                                                <h2>Passe do Metro do Porto</h2>
+                                                <p>Validade: 28/12/2018</p>
+                                                <a href="">Renovar</a>
+                                                <a href="#">Ver histórico de utilização</a>
+                                                
+                                                
+
+                                                <div class="spliter"></div>
+                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal">
+													<button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112); width:100%" class="btn btn-success">Validar</button>
+                                                </a>
+                                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                            
+                            <h2 class="block-title color-dark">Os seus cartões<a href="#" class="float-right text-grey">Ver tudo</a></h2>
+                            <div class="carosel">
+                                <div data-pagination='{"el": ".swiper-pagination2"}' class="swiper-container swiper-init swipermultiple mostviewed mostviewed2">
+                                    <div class="swiper-pagination swiper-pagination2"></div>
+                                    <div class="swiper-wrapper">
+                                    	<div class="swiper-slide pt-2">
+                                            <div class="swiper-content-block right-block">
+                                                <a class="like-heart color-blue">1x</a>
+	                                                <p class="">ANDANTE 24</p>
+                                                <h2>Bilhete de Zona Z2</h2>
+                                                <p>Validade: 02/09/2019</p>
+                                                <p class="cartoes" id="b1"></p>
+                                                
+                                                <div class="spliter"></div>
+                                                <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
+                                                	<button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
+                                                </a>
+                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b1', 'b1', 2)">
+                                                	<button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    	<div class="swiper-slide pt-2">
+                                            <div class="swiper-content-block right-block">
+                                                <a class="like-heart color-blue">2x</a>
+	                                                <p class="">ANDANTE AZUL</p>
+                                                <h2>Bilhete de Zona Z3</h2>
+                                                <p>Validade: 02/09/2019</p>
+                                                <p class="cartoes" id="b2"></p>
+                                                <div class="spliter"></div>
+                                                
+                                                <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
+                                                	<button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
+                                                </a>
+                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b2', 'b2', 1)">
+                                                	<button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide pt-2">
+                                            <div class="swiper-content-block right-block">
+                                                <a class="like-heart color-blue">3x</a>
+                                                <p class="">ANDANTE AZUL</p>
+                                                <h2>Bilhete de Zona Z2</h2>
+                                                <p>Validade: 21/03/2019</p>
+                                                <p class="cartoes" id="b3"></p>
+                                                <div class="spliter"></div>
+                                                <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
+                                                	<button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
+                                                </a>
+                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b3', 'b3', 1)">
+                                                	<button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide pt-2">
+                                            <div class="swiper-content-block right-block">
+                                                <a class="like-heart color-blue">1x</a>
+												<p class="">ANDANTE AZUL</p>
+                                                <h2>Bilhete de Zona Z9</h2>
+                                                <p>Validade: 02/09/2019</p>
+                                                <p class="cartoes" id="b4"></p>
+                                                <div class="spliter"></div>
+                                                <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
+                                                	<button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
+                                                </a>
+                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b4', 'b4', 2.5)">
+                                                	<button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="swiper-slide pt-2">
+                                            <div class="swiper-content-block right-block">
+                                                <a class="like-heart color-blue">4x</a>
+												<p class="">ANDANTE AZUL</p>
+                                                <h2>Bilhete de Zona Z8</h2>
+                                                <p>Validade: 02/09/2019</p>
+                                                <p class="cartoes" id="b5"></p>
+                                                <div class="spliter"></div>
+                                                <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
+                                                	<button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
+                                                </a>
+                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b5', 'b5', 2.25)">
+                                                	<button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="swiper-slide pt-2">
+                                            <div class="swiper-content-block right-block">
+                                                <a class="like-heart color-blue">1x</a>
+												<p class="">ANDANTE TOUR</p>
+                                                <h2>Bilhete de Tour 3</h2>
+                                                <p>Validade: 02/09/2019</p>
+                                                <p class="cartoes" id="b6">/p>
+                                                <div class="spliter"></div>
+                                                <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
+                                                	<button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
+                                                </a>
+                                                <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b6', 'b6', 72)">
+                                                	<button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
                     <div class="tab-pane fade" id="nav-favorite" role="tabpanel" aria-labelledby="nav-favorite-tab">
                         <div class="content-sticky-footer">
                             <h2 class="block-title color-dark">TO BE IMPLEMENTED!</h2>
@@ -904,11 +1140,165 @@
                     </div>
 
 
+                    <!-- MAIN TAB: WALLET -->
+                    <div class="tab-pane fade show active" id="nav-wallet" role="tabpanel" aria-labelledby="nav-wallet-tab">
+                        <div class="content-sticky-footer">
+                            
+                            <!-- MENU CARREGAR -->
+                            <!-- <h2 class="block-title color-dark">Saldo: <label id="total_amount">10.00€</label> <a href="#fullscreenaddamount" data-toggle="modal" class="float-right"><i class="icon material-icons">add</i></a></h2> -->
+                            
+                            <div class="row m-0">
+                                <div class="col mt-3">
+                                    <div class="input-group searchshadow">
+                                        <input type="text" class="form-control bg-white" placeholder="Pesquise nos seus bilhetes" aria-label="">
+                                        <div class="input-group-append">
+                                            <button type="button" class="input-group-text "><i class="material-icons">search</i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h2 class="block-title color-dark">Os seus passes mensais</h2>
+                            <div class="carosel">
+                                <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="30" data-slides-per-view="1" class="swiper-container swiper-init swipermultiple news-carousel mb-2">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="block-slide">
+                                                <figure class="m-0 news-pic">
+                                                    <div class="validateExpand button-glow-red like-heart flash" id="passe-1" data-toggle="modal" href="#validateModal" onclick="startTimerP1()">
+                                                        <i class="icon material-icons">done</i> VALIDAR
+                                                    </div>
+                                                    <div class="validated button-glow-green like-heart" id="passe-1-count" data-toggle="modal" href="#validateModal">
+                                                        <i class="icon material-icons">done</i> <span id="timerP1"></span>
+                                                    </div>
+                                                    
+                                                    <img src="img/passes/3.png" alt="" class="w-100" data-toggle="modal" data-target="#purchased">
+                                                    <figcaption>Assinatura Andante Z2</figcaption>
+                                                </figure>
+                                                <div class="card card-data-item">
+                                                    <div class="card-footer pt-0">
+                                                        <div class="row">
+                                                            <div class="col-auto">
+                                                                <a href=""><i class="fas fa-history" style="color: #007bff;"></i>
+                                                                <span class="post-seconds text-blue">Histórico</span></a>
+                                                            </div>
+                                                            <div class="col text-right">
+                                                                <span class="post-seconds"><span>Validade:</span> 28/12/2018</span>
+                                                                <i class="material-icons text-grey">event</i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="block-slide">
+                                                <figure class="m-0 news-pic">
+                                                        <div class="validateExpand button-glow-red like-heart flash" id="passe-2" data-toggle="modal" href="#validateModal" onclick="startTimerP2()">
+                                                            <i class="icon material-icons">done</i> VALIDAR
+                                                        </div>
+                                                        <div class="validated button-glow-green like-heart" id="passe-2-count" data-toggle="modal" href="#validateModal">
+                                                            <i class="icon material-icons">done</i> <span id="timerP2"></span>
+                                                        </div>
+                                                    <img src="img/passes/3.png" alt="" class="w-100">
+                                                    <figcaption>Assinatura Andante Z4</figcaption>
+                                                </figure>
+                                                <div class="card card-data-item">
+                                                    <div class="card-footer pt-0">
+                                                        <div class="row">
+                                                            <div class="col-auto">
+                                                                <a href=""><i class="fas fa-history" style="color: #007bff;"></i>
+                                                                <span class="post-seconds text-blue">Histórico</span></a>
+                                                            </div>
+                                                            <div class="col text-right">
+                                                                <span class="post-seconds"><span>Validade:</span> 28/12/2018</span>
+                                                                <i class="material-icons text-grey">event</i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h2 class="block-title color-dark">Os seus bilhetes individuais</h2>
+                            <div class="carosel">
+                                <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="30" data-slides-per-view="1" class="swiper-container swiper-init swipermultiple news-carousel mb-2">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="block-slide">
+                                                <figure class="m-0 news-pic">
+                                                    <div class="validateExpand button-glow-red like-heart flash" id="passe-1" data-toggle="modal" href="#validateModal" onclick="startTimerP1()">
+                                                        <i class="icon material-icons">done</i> VALIDAR
+                                                    </div>
+                                                    <div class="validated button-glow-green like-heart" id="passe-1-count" data-toggle="modal" href="#validateModal">
+                                                        <i class="icon material-icons">done</i> <span id="timerP1"></span>
+                                                    </div>
+                                                    
+                                                    <img src="img/passes/2.png" alt="" class="w-100" data-toggle="modal" data-target="#purchased">
+                                                    <figcaption>Assinatura Andante Z2</figcaption>
+                                                </figure>
+                                                <div class="card card-data-item">
+                                                    <div class="card-footer pt-0">
+                                                        <div class="row">
+                                                            <div class="col-auto">
+                                                                <a href=""><i class="fas fa-history" style="color: #007bff;"></i>
+                                                                <span class="post-seconds text-blue">Histórico</span></a>
+                                                            </div>
+                                                            <div class="col text-right">
+                                                                <span class="post-seconds"><span>Validade:</span> 28/12/2018</span>
+                                                                <i class="material-icons text-grey">event</i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="block-slide">
+                                                <figure class="m-0 news-pic">
+                                                        <div class="validateExpand button-glow-red like-heart flash" id="passe-2" data-toggle="modal" href="#validateModal" onclick="startTimerP2()">
+                                                            <i class="icon material-icons">done</i> VALIDAR
+                                                        </div>
+                                                        <div class="validated button-glow-green like-heart" id="passe-2-count" data-toggle="modal" href="#validateModal">
+                                                            <i class="icon material-icons">done</i> <span id="timerP2"></span>
+                                                        </div>
+                                                    <img src="img/passes/2.png" alt="" class="w-100">
+                                                    <figcaption>Assinatura Andante Z4</figcaption>
+                                                </figure>
+                                                <div class="card card-data-item">
+                                                    <div class="card-footer pt-0">
+                                                        <div class="row">
+                                                            <div class="col-auto">
+                                                                <a href=""><i class="fas fa-history" style="color: #007bff;"></i>
+                                                                <span class="post-seconds text-blue">Histórico</span></a>
+                                                            </div>
+                                                            <div class="col text-right">
+                                                                <span class="post-seconds"><span>Validade:</span> 28/12/2018</span>
+                                                                <i class="material-icons text-grey">event</i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
 
 
 
                     <!-- TAB 3: TAB PONTOS -->
-                    <div class="tab-pane fade " id="nav-cart" role="tabpanel" aria-labelledby="nav-cart-tab">
+                    <div class="tab-pane fade" id="nav-cart" role="tabpanel" aria-labelledby="nav-cart-tab">
                         <div class="content-sticky-footer">                        
                             <div class="col-12 w-100">
                                 <div class="card mb-3 wizard my-3">
@@ -1626,8 +2016,66 @@
         });
 
     </script>
+
+
+    <!-- Countdown Simple -->
+    <script>
+        document.getElementById('timerP1').innerHTML = 60 + ':' + '00';
+
+        function startTimerP1() {
+            document.getElementById("passe-1").style.display = "none";
+            document.getElementById("passe-1-count").style.display = "flex";
+            document.getElementById("wallet-icon").classList.remove("button-glow-red");
+            document.getElementById("wallet-icon").classList.remove("gradient-red");
+            document.getElementById("wallet-icon").classList.add("button-glow-green");
+            document.getElementById("wallet-icon").classList.add("gradient-green");
+            var presentTime = document.getElementById('timerP1').innerHTML;
+            var timeArray = presentTime.split(/[:]+/);
+            var m = timeArray[0];
+            var s = checkSecond((timeArray[1] - 1));
+            if(s==59){m=m-1}
+            //if(m<0){alert('timer completed')}
+            
+            document.getElementById('timerP1').innerHTML =
+                m + ":" + s;
+            setTimeout(startTimerP1, 1000);
+        }
+
+        function checkSecond(sec) {
+        if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+        if (sec < 0) {sec = "59"};
+        return sec;
+        }
+    </script>
+
+    <script>
+        document.getElementById('timerP2').innerHTML = 60 + ':' + '00';
+
+        function startTimerP2() {
+            document.getElementById("passe-2").style.display = "none";
+            document.getElementById("passe-2-count").style.display = "flex";
+            document.getElementById("wallet-icon").classList.remove("button-glow-red");
+            document.getElementById("wallet-icon").classList.remove("gradient-red");
+            document.getElementById("wallet-icon").classList.add("button-glow-green");
+            document.getElementById("wallet-icon").classList.add("gradient-green");
+            var presentTime = document.getElementById('timerP2').innerHTML;
+            var timeArray = presentTime.split(/[:]+/);
+            var m = timeArray[0];
+            var s = checkSecond((timeArray[1] - 1));
+            if(s==59){m=m-1}
+            //if(m<0){alert('timer completed')}
+            
+            document.getElementById('timerP1').innerHTML =
+                m + ":" + s;
+            setTimeout(startTimerP2, 1000);
+        }
+
+        function checkSecond(sec) {
+        if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+        if (sec < 0) {sec = "59"};
+        return sec;
+        }
+    </script>
+
 </body>
-
-
-<!-- Mirrored from bootstraptemplatedesign.com/demo-application/mobileux/4-Bootstrap_magazine-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Nov 2018 00:36:21 GMT -->
 </html>
