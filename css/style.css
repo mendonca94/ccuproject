@@ -2656,6 +2656,16 @@ formats search button appropriately
 }
 
 
+#consultPath_result {
+    font-size: 14px;
+}
+
+#consultPath_result img {
+    width: 100%;
+    position: relative;
+}
+
+
 
 @keyframes glowingGreen {
     0% { box-shadow: 0 0 -10px rgb(0, 196, 115); }
@@ -2782,7 +2792,7 @@ width: 300px;
 
 
 
-#saldovalue {
+#saldovalue, #pointsvalue {
     display: none;
 }
 

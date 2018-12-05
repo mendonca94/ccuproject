@@ -23,7 +23,70 @@ $(document).ready(function () {
         $('#saldovalue').html(newval);
         $('.current-saldo').html(newval);
     });
-            
+
+
+    // buy suggested ticket 1
+    $("#bilhetesug1").on('click', function () {
+        var value = $('#saldovalue').html();
+        var flvalue = parseFloat(value);
+        
+        var newval = flvalue - 1.25;
+        $('#saldovalue').html(newval);
+        $('.current-saldo').html(newval);
+    });  
+
+    // buy suggested ticket 2
+    $("#bilhetesug2").on('click', function () {
+        var value = $('#saldovalue').html();
+        var flvalue = parseFloat(value);
+        
+        var newval = flvalue - 2.35;
+        $('#saldovalue').html(newval);
+        $('.current-saldo').html(newval);
+    });  
+
+
+//  redeem button on profile menu
+    $("#prize1").on('click', function () {
+        var value = $('#pointsvalue').html();
+        var ivalue = parseInt(value);
+
+        var newval = ivalue - 300;
+        $('#newvalue').html(newval);
+        $('.current-points').html(newval);
+    });
+
+    $("#prize2").on('click', function () {
+        var value = $('#pointsvalue').html();
+        var ivalue = parseInt(value);
+
+        var newval = ivalue - 700;
+        $('#newvalue').html(newval);
+        $('.current-points').html(newval);
+    });
+
+    $("#prize3").on('click', function () {
+        var value = $('#pointsvalue').html();
+        var ivalue = parseInt(value);
+
+        var newval = ivalue - 1300;
+        $('#newvalue').html(newval);
+        $('.current-points').html(newval);
+    });
+
+    $("#prize4").on('click', function () {
+        var value = $('#pointsvalue').html();
+        var ivalue = parseInt(value);
+
+        var newval = ivalue - 1300;
+        $('#newvalue').html(newval);
+        $('.current-points').html(newval);
+    });
+
+
+
+
+
 
 
 
@@ -161,7 +224,23 @@ function timer(bID, _bID, time){
 	}, 1000);}
 
 
+
+
+function decreaseAmount(val){
+    
+    var saldo = $('#saldovalue').html();
+    var flsaldo = parseFloat(saldo);
+
+    var newval = flsaldo - val;
+    console.log(newval);
+    $('#saldovalue').html(newval);
+    $('.current-saldo').html(newval);
+}
+
+
+
 function searchPath(){
+    // search and buy option
 
     var selectorFrom = document.getElementById('searchPath_from');
     var valueFrom = selectorFrom[selectorFrom.selectedIndex].value;
@@ -186,9 +265,17 @@ function searchPath(){
 
     var string1 = "Para o trajecto selecionado, deverá adquirir um título "
     var string2 = ".<br><img src=\""
-    var string3 = "\"><br><br><button class=\"mb-4 btn btn-lg btn-success w-100\" onclick=\"decreaseAmount("
+    var string3 = "\"><br><br><a data-toggle=\"modal\" data-target=\"#purchasedmap\" class=\"media-body\"><button class=\"mb-4 btn btn-lg btn-success w-100\" onclick=\"decreaseAmount("
     var string4 = ")\" type=\"button\">Comprar "
-    var string5 = "</button>"
+    var string5 = "</button></a>"
+
+
+
+
+
+
+
+
 
 
 
@@ -202,9 +289,53 @@ function searchPath(){
 
 }
 
-function decreaseAmount(value){
-    var total_amountLabel = $("#total_amount");
-    var currentAmount = parseFloat(total_amountLabel.text()).toFixed(2);
-    var newValue = parseFloat(currentAmount - value).toFixed(2);
-    total_amountLabel.html(newValue + "€");
+
+
+
+
+
+
+function consultPath(){
+    // search option
+
+    var selectorFrom = document.getElementById('consultPath_from');
+    var valueFrom = selectorFrom[selectorFrom.selectedIndex].value;
+
+    var selectorTo = document.getElementById('consultPath_to');
+    var valueTo = selectorTo[selectorTo.selectedIndex].value;
+
+    console.log(valueTo);
+    console.log(valueFrom);
+
+    var result = $("#consultPath_result");
+    // ORIGIN , DESTINATION, TICKET TYPE, PRIZE, PRIZE STR, IMAGE
+    var output = [["Trindade", "Estádio do Dragão", "Z2", 1.20, "1.20€", "img/C1_mapa.png"],
+                    ["Trindade", "Fórum da Maia", "Z3", 1.60, "1.60€", "img/C1_mapa.png"],
+                    ["Trindade", "Santa Clara", "Z6", 2.80, "2.80€", "img/C1_mapa.png"],
+                    ["São Bento", "Fórum da Maia", "Z3", 1.60, "1.60€", "img/C1_mapa.png"],
+                    ["São Bento", "Santa Clara", "Z6", 2.80, "2.80€", "img/C1_mapa.png"],
+                    ["São Bento", "Estádio do Dragão", "Z2", 1.20, "1.20€", "img/C1_mapa.png"],
+                    ["Pólo Universitário", "Santa Clara", "Z5", 2.40, "2.40€", "img/C6_mapa.png"],
+                    ["Pólo Universitário", "Fórum da Maia", "Z2", 1.20, "1.20€", "img/C6_mapa.png"],
+                    ["Pólo Universitário", "Estádio do Dragão", "Z2", 1.20, "1.20€", "img/C6_mapa.png"]]
+
+    var string1 = "Para o trajecto selecionado, deverá adquirir um <b>título "
+    var string2 = "</b>.<br><img src=\""
+    var string3 = "\"><br><br>"
+
+
+
+    for (var i = 0; i < output.length; i++) {
+        
+        if (output[i][0] == valueFrom && output[i][1] == valueTo) {
+                result.html(string1 + output[i][2] + string2 + output[i][5] + string3);
+                break;
+            }
+    }
+
 }
+
+
+
+
+
