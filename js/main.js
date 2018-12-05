@@ -319,7 +319,7 @@ function consultPath(){
                     ["Pólo Universitário", "Fórum da Maia", "Z2", 1.20, "1.20€", "img/C6_mapa.png"],
                     ["Pólo Universitário", "Estádio do Dragão", "Z2", 1.20, "1.20€", "img/C6_mapa.png"]]
 
-    var string1 = "Para o trajecto selecionado, deverá adquirir um <b>título "
+    var string1 = "Para o trajeto selecionado, deverá adquirir um <b>título "
     var string2 = "</b>.<br><img src=\""
     var string3 = "\"><br><br>"
 
