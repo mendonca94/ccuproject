@@ -63,7 +63,7 @@
                     </div>
                     <div class="media-body">
                         <h5>Gonçalo Matos</h5>
-                        <p>1029 pontos</p>
+                        <p><span class="current-points">5029</span> pontos</p>
                     </div>
                 </a>
             </div>
@@ -434,7 +434,7 @@
                                 <img src="img/g.png" alt="">
                             </figure>
                             <div class="media-content">
-                                <h6>Gonçalo Matos<br><small>1029 pontos</small></h6>
+                                <h6>Gonçalo Matos<br><small><span class="current-points">5029</span> pontos</small></h6>
                             </div>
                         </a>
                         <br>
@@ -568,8 +568,9 @@
                                 <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="30" data-slides-per-view="1" class="swiper-container swiper-init swipermultiple news-carousel mb-2">
                                     <div class="swiper-pagination"></div>
                                     <div class="swiper-wrapper">
+
                                         <div class="swiper-slide">
-                                            <div class="block-slide">
+                                            <div class="block-slide" id="bilhetesug1">
                                                 <figure class="m-0 news-pic">
                                                     <div class="suggestion like-heart"><i class="fas fa-atom"></i></div>
                                                     <img src="img/passes/2.png" alt="" class="w-100" data-toggle="modal" data-target="#purchased">
@@ -600,16 +601,17 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="swiper-slide">
                                             <div class="block-slide">
                                                 <figure class="m-0 news-pic">
                                                     <div class="suggestion like-heart"><i class="fas fa-atom"></i></div>
-                                                    <img src="img/passes/3.png" alt="" class="w-100">
+                                                    <img src="img/passes/3.png" alt="" class="w-100" data-toggle="modal" data-target="#purchased2">
                                                     <figcaption>Bilhete de Zona D10</figcaption>
                                                 </figure>
-                                                <div class="card card-data-item">
+                                                <div class="card card-data-item" id="bilhetesug2">
                                                     <div class="media my-2 px-3">
-                                                        <a href="#" class="media-body">
+                                                        <a data-toggle="modal" data-target="#purchased2" class="media-body">
                                                             <h5 class="mt-1">Compre um bilhete</h5>
                                                             <p>Sugestão com base na sua última viagem</p>
                                                         </a>
@@ -632,6 +634,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -647,7 +650,36 @@
                     <div class="tab-pane fade" id="nav-favorite" role="tabpanel" aria-labelledby="nav-favorite-tab">
                         <div class="content-sticky-footer">
 
-                           
+                            <h2 class="block-title color-dark">Consultar Mapa</h2>
+                            <div class="col-12 w-100">
+                                <div class="card mb-3 wizard my-3">
+                                    <div class="row mt-3 mx-3">
+                                        <p>Seleccione Origem e Destino:</p>
+                                    </div>
+                                    <div class="row mx-1 mt-0">
+                                        <div id ="col">
+                                            <div class="btn-group ml-2 mr-2">
+                                                <select id="consultPath_from" class="form-control small-form-control" id="exampleFormControlSelect1">
+                                                    <option>Pólo Universitário</option>
+                                                    <option>São Bento</option>
+                                                    <option>Trindade</option>
+                                                </select>
+
+                                                <select id="consultPath_to" class="form-control small-form-control" id="exampleFormControlSelect1">
+                                                    <option>Estádio do Dragão</option>
+                                                    <option>Fórum da Maia</option> 
+                                                    <option>Santa Clara</option>
+                                                </select>
+                                                <button type="submit" class="btn btn-primary search-button" onclick="consultPath()"><i class="material-icons text-white">search</i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mx-4 ml-1">
+                                        <div id="consultPath_result" class="mt-3"></div>
+                                    </div>
+                                </div>
+                            </div>
 
 
 
@@ -1204,7 +1236,9 @@
                                                             <p class="mb-0 f-sm">Adquira um bilhete Z2 utilizando os seus pontos acumulados!</p>
                                                         </div>
                                                         <div class="card-footer">
-                                                            <button class="btn btn-outline-light btn-sm">300 pontos</button>
+                                                            <a data-toggle="modal" data-target="#prizeobtained" class="media-body">
+                                                            <button class="btn btn-outline-light btn-sm" id="prize1">300 pontos</button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1224,7 +1258,9 @@
                                                             <p class="mb-0 f-sm">Adquira um bilhete Z5 utilizando os seus pontos acumulados!</p>
                                                         </div>
                                                         <div class="card-footer">
-                                                            <button class="btn btn-outline-light btn-sm">700 pontos</button>
+                                                            <a data-toggle="modal" data-target="#prizeobtained" class="media-body">
+                                                            <button class="btn btn-outline-light btn-sm" id="prize2">700 pontos</button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1243,7 +1279,9 @@
                                                             <p class="mb-0 f-sm">Troque pontos por um bilhete de entrada no Museu Serralves!</p>
                                                         </div>
                                                         <div class="card-footer">
-                                                            <button class="btn btn-outline-light btn-sm">1300 pontos</button>
+                                                            <a data-toggle="modal" data-target="#prizeobtained" class="media-body">
+                                                            <button class="btn btn-outline-light btn-sm" id="prize3">1300 pontos</button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1262,7 +1300,9 @@
                                                             <p class="mb-0 f-sm">Adquira um bilhete de cinema a utilizar no NorteShopping com os seus pontos disponíveis!</p>
                                                         </div>
                                                         <div class="card-footer">
-                                                            <button class="btn btn-outline-light btn-sm">1300 pontos</button>
+                                                            <a data-toggle="modal" data-target="#prizeobtained" class="media-body">
+                                                            <button class="btn btn-outline-light btn-sm" id="prize4">1300 pontos</button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1302,7 +1342,7 @@
                             </div>
                             <div class="row mx-0">
                                 <div class="col text-center">
-                                    <h3 class="mt-3 mb-0">1029</h3>
+                                    <h3 class="mt-3 mb-0"><span class="current-points">5029</span></h3>
                                     <p class="mt-0 mb-3 color-gray">Pontos</p>
                                 </div>
                                 <div class="col text-center">
@@ -1327,7 +1367,10 @@
                                         <div class="input-group mb-3">
                                             <input type="text" class="form-control" placeholder="Digite o código" aria-label="Digite o código">
                                             <div class="input-group-append">
+
                                                 <div id="saldovalue">10.91</div>
+                                                <div id="pointsvalue">5029</div>
+
                                                 <button class="btn btn-primary" id="redeembutton" data-toggle="modal" data-target="#publish" type="button">Resgatar</button>
                                             </div>
                                         </div>
@@ -1354,7 +1397,7 @@
                                     <a class="like-heart text-blue"><i class="icon material-icons text-dark">star</i></a>
                                     
                                     <h4 class="title-small-carousel">Pontos</h4>
-                                    <h1>1029 pontos</h1>
+                                    <h1><span class="current-points">5029</span> pontos</h1>
 
                                     <div class="gaugewrap">
                                         <h2 class="title-number-carousel"><small><a href="#">Ver histórico »</a></small></h2>
@@ -1462,7 +1505,53 @@
         </div>
         <!-- publish modal ends -->
     
+    <!-- publish modal start -->
+    <div class="modal fade" id="purchased2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content gradient-green text-white z4">
+                <div class="modal-header text-center">
+                    <h3 class="mt-2 text-white text-center" style="width: 100%">Bilhete comprado!</h3>
+                </div>
+                <div class="modal-body text-center text-white">
+                    <p>Comprou um bilhete da Zona D10. Valide-o antes de iniciar a sua viagem.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light btn-block col" data-dismiss="modal" data-toggle="collapse" href="#redeem">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- publish modal ends -->
 
+    <!-- publish modal start -->
+    <div class="modal fade" id="purchasedmap" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content gradient-green text-white z4">
+                <div class="modal-header text-center">
+                    <h3 class="mt-2 text-white text-center" style="width: 100%">Bilhete comprado!</h3>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light btn-block col" data-dismiss="modal" data-toggle="collapse" href="#redeem">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- publish modal ends -->
+
+    <!-- publish modal start -->
+    <div class="modal fade" id="prizeobtained" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content gradient-green text-white z4">
+                <div class="modal-header text-center">
+                    <h3 class="mt-2 text-white text-center" style="width: 100%">Prémio obtido!</h3>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light btn-block col" data-dismiss="modal" data-toggle="collapse" href="#redeem">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- publish modal ends -->
 
 
 
