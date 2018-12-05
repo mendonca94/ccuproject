@@ -835,11 +835,11 @@
                                         <div class="swiper-slide">
                                             <div class="block-slide">
                                                 <figure class="m-0 news-pic">
-                                                    <div class="validateExpand button-glow-red like-heart flash" id="passe-1" data-toggle="modal" href="#validateModal" onclick="startTimerP1()">
+                                                    <div class="validateExpand button-glow-red like-heart flash" id="bilhete-1" data-toggle="modal" href="#validateModal" onclick="startTimerB1()">
                                                         <i class="icon material-icons">done</i> VALIDAR
                                                     </div>
-                                                    <div class="validated button-glow-green like-heart" id="passe-1-count" data-toggle="modal" href="#validateModal">
-                                                        <i class="icon material-icons">done</i> <span id="timerP1"></span>
+                                                    <div class="validated button-glow-green like-heart" id="bilhete-1-count" data-toggle="modal" href="#validateModal">
+                                                        <i class="icon material-icons">done</i> <span id="timerB1"></span>
                                                     </div>
                                                     
                                                     <img src="img/passes/2.png" alt="" class="w-100" data-toggle="modal" data-target="#purchased">
@@ -864,11 +864,11 @@
                                         <div class="swiper-slide">
                                             <div class="block-slide">
                                                 <figure class="m-0 news-pic">
-                                                        <div class="validateExpand button-glow-red like-heart flash" id="passe-2" data-toggle="modal" href="#validateModal" onclick="startTimerP2()">
+                                                        <div class="validateExpand button-glow-red like-heart flash" id="bilhete-2" data-toggle="modal" href="#validateModal" onclick="startTimerB2()">
                                                             <i class="icon material-icons">done</i> VALIDAR
                                                         </div>
-                                                        <div class="validated button-glow-green like-heart" id="passe-2-count" data-toggle="modal" href="#validateModal">
-                                                            <i class="icon material-icons">done</i> <span id="timerP2"></span>
+                                                        <div class="validated button-glow-green like-heart" id="bilhete-2-count" data-toggle="modal" href="#validateModal">
+                                                            <i class="icon material-icons">done</i> <span id="timerB2"></span>
                                                         </div>
                                                     <img src="img/passes/2.png" alt="" class="w-100">
                                                     <figcaption>Assinatura Andante Z4</figcaption>
@@ -1620,6 +1620,13 @@
 
     <!-- Countdown Simple -->
     <script>
+        function checkSecond(sec) {
+        if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+        if (sec < 0) {sec = "59"};
+        return sec;
+        }
+
+
         document.getElementById('timerP1').innerHTML = 60 + ':' + '00';
 
         function startTimerP1() {
@@ -1641,14 +1648,7 @@
             setTimeout(startTimerP1, 1000);
         }
 
-        function checkSecond(sec) {
-        if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
-        if (sec < 0) {sec = "59"};
-        return sec;
-        }
-    </script>
 
-    <script>
         document.getElementById('timerP2').innerHTML = 60 + ':' + '00';
 
         function startTimerP2() {
@@ -1670,11 +1670,51 @@
             setTimeout(startTimerP2, 1000);
         }
 
-        function checkSecond(sec) {
-        if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
-        if (sec < 0) {sec = "59"};
-        return sec;
+
+
+        document.getElementById('timerB1').innerHTML = 60 + ':' + '00';
+
+        function startTimerB1() {
+            document.getElementById("bilhete-1").style.display = "none";
+            document.getElementById("bilhete-1-count").style.display = "flex";
+            document.getElementById("wallet-icon").classList.remove("button-glow-red");
+            document.getElementById("wallet-icon").classList.remove("gradient-red");
+            document.getElementById("wallet-icon").classList.add("button-glow-green");
+            document.getElementById("wallet-icon").classList.add("gradient-green");
+            var presentTime = document.getElementById('timerB1').innerHTML;
+            var timeArray = presentTime.split(/[:]+/);
+            var m = timeArray[0];
+            var s = checkSecond((timeArray[1] - 1));
+            if(s==59){m=m-1}
+            //if(m<0){alert('timer completed')}
+            
+            document.getElementById('timerB1').innerHTML =
+                m + ":" + s;
+            setTimeout(startTimerB1, 1000);
         }
+
+        document.getElementById('timerB2').innerHTML = 60 + ':' + '00';
+
+        function startTimerB2() {
+            document.getElementById("bilhete-2").style.display = "none";
+            document.getElementById("bilhete-2-count").style.display = "flex";
+            document.getElementById("wallet-icon").classList.remove("button-glow-red");
+            document.getElementById("wallet-icon").classList.remove("gradient-red");
+            document.getElementById("wallet-icon").classList.add("button-glow-green");
+            document.getElementById("wallet-icon").classList.add("gradient-green");
+            var presentTime = document.getElementById('timerB2').innerHTML;
+            var timeArray = presentTime.split(/[:]+/);
+            var m = timeArray[0];
+            var s = checkSecond((timeArray[1] - 1));
+            if(s==59){m=m-1}
+            //if(m<0){alert('timer completed')}
+            
+            document.getElementById('timerB2').innerHTML =
+                m + ":" + s;
+            setTimeout(startTimerB2, 1000);
+        }
+
+
     </script>
 
 </body>
