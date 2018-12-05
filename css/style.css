@@ -2617,7 +2617,37 @@ body .wrapper .page .footer {
 
 .cartoes{
 	display: none;
-#searchPath_result{
-    margin-top:25px;
-    border-top: 1px solid lightgray;
+}
+
+/*
+
+smaller text on forms
+
+*/
+.small-form-control {
+    font-size: 12px;
+    padding: 5px;
+} 
+
+/*
+
+formats search button appropriately
+
+*/
+
+.search-button {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 0;
+}
+
+#searchPath_result {
+    font-size: 14px;
+}
+
+#searchPath_result img {
+    width: 100%;
+    position: relative;
+    
 }

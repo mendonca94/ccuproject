@@ -127,35 +127,44 @@ function timer(bID, _bID, time){
 		}*/
 	}, 1000);}
 function searchPath(){
+
     var selectorFrom = document.getElementById('searchPath_from');
     var valueFrom = selectorFrom[selectorFrom.selectedIndex].value;
 
     var selectorTo = document.getElementById('searchPath_to');
     var valueTo = selectorTo[selectorTo.selectedIndex].value;
 
+    console.log(valueTo);
+    console.log(valueFrom);
+
     var result = $("#searchPath_result");
-    
-    if (valueFrom=="Trindade" && valueTo=="Estádio do Dragão"){
-        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z2</label><button onclick='decreaseAmount(1.20)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (1.20€)</button><image style='float:none' src='img/C1_mapa.png'>");
-    } else if (valueFrom=="Trindade" && valueTo=="Fórum da Maia"){
-        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z3</label><button onclick='decreaseAmount(1.60)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (1.60€)</button><image style='float:none' src='img/C1_mapa.png'>");
-    } else if (valueFrom=="Trindade" && valueTo=="Santa Clara"){
-        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z6</label><button onclick='decreaseAmount(2.80)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (2.80€)</button><image style='float:none' src='img/C1_mapa.png'>");
-    
-    } else if (valueFrom=="São Bento" && valueTo=="Fórum da Maia"){
-        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z3</label><button onclick='decreaseAmount(1.60)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (1.60€)</button><image style='float:none' src='img/C1_mapa.png'>");
-    } else if (valueFrom=="São Bento" && valueTo=="Santa Clara"){
-        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z6</label><button onclick='decreaseAmount(2.80)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (2.80€)</button><image style='float:none' src='img/C1_mapa.png'>");
-    } else if (valueFrom=="São Bento" && valueTo=="Estádio do Dragão"){
-        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z2</label><button onclick='decreaseAmount(1.20)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (1.20€)</button><image style='float:none' src='img/C1_mapa.png'>");
-    
-    } else if (valueFrom=="Pólo Universitário" && valueTo=="Santa Clara"){
-        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z5</label><button onclick='decreaseAmount(2.40)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (2.40€)</button><image style='float:none' src='img/C6_mapa.png'>");
-    } else if (valueFrom=="Pólo Universitário" && valueTo=="Fórum da Maia"){
-        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z2</label><button onclick='decreaseAmount(1.20)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (1.20€)</button><image style='float:none' src='img/C6_mapa.png'>");
-    } else if (valueFrom=="Pólo Universitário" && valueTo=="Estádio do Dragão"){
-        result.html("<label style='font-size:15px;'>Para o trajeto selecionado, deve utilizar um título Z2</label><button onclick='decreaseAmount(1.20)' type='button' style='border-radius:10px; background: red; border-color: red;' class='btn btn-success'>Comprar (1.20€)</button><image style='float:none' src='img/C6_mapa.png'>");
+    // ORIGIN , DESTINATION, TICKET TYPE, PRIZE, PRIZE STR, IMAGE
+    var output = [["Trindade", "Estádio do Dragão", "Z2", 1.20, "1.20€", "img/C1_mapa.png"],
+                    ["Trindade", "Fórum da Maia", "Z3", 1.60, "1.60€", "img/C1_mapa.png"],
+                    ["Trindade", "Santa Clara", "Z6", 2.80, "2.80€", "img/C1_mapa.png"],
+                    ["São Bento", "Fórum da Maia", "Z3", 1.60, "1.60€", "img/C1_mapa.png"],
+                    ["São Bento", "Santa Clara", "Z6", 2.80, "2.80€", "img/C1_mapa.png"],
+                    ["São Bento", "Estádio do Dragão", "Z2", 1.20, "1.20€", "img/C1_mapa.png"],
+                    ["Pólo Universitário", "Santa Clara", "Z5", 2.40, "2.40€", "img/C6_mapa.png"],
+                    ["Pólo Universitário", "Fórum da Maia", "Z2", 1.20, "1.20€", "img/C6_mapa.png"],
+                    ["Pólo Universitário", "Estádio do Dragão", "Z2", 1.20, "1.20€", "img/C6_mapa.png"]]
+
+    var string1 = "Para o trajecto selecionado, deverá adquirir um título "
+    var string2 = ".<br><img src=\""
+    var string3 = "\"><br><br><button class=\"mb-4 btn btn-lg btn-success w-100\" onclick=\"decreaseAmount("
+    var string4 = ")\" type=\"button\">Comprar "
+    var string5 = "</button>"
+
+
+
+    for (var i = 0; i < output.length; i++) {
+        
+        if (output[i][0] == valueFrom && output[i][1] == valueTo) {
+                result.html(string1 + output[i][2] + string2 + output[i][5] + string3 + output[i][3] + string4 + output[i][4] + string5);
+                break;
+            }
     }
+
 }
 
 function decreaseAmount(value){
