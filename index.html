@@ -25,34 +25,24 @@
     <meta property="og:url" content="http://web.tecnico.ulisboa.pt/~ist181943/ccu/ccuproject/login.html" />
     <meta property="og:image" content="http://web.tecnico.ulisboa.pt/~ist181943/ccu/ccuproject/img/passes/2.png" />
 
+    <link rel="apple-touch-icon" href="img/icon.png">
+
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Anda">
-    <link rel="apple-touch-icon" href="img/icon.png">
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-title" content="Anda">
 
     <title>CCU</title>
-
-
-
-
 </head>
 
 <body class="color-theme-blue push-content-right theme-light">
     <div class="loader justify-content-center ">
         <div class="maxui-roller align-self-center">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
         </div>
     </div>
+
     <div class="wrapper">
         <!-- sidebar left start -->
         <div class="sidebar sidebar-left">
@@ -69,24 +59,6 @@
             </div>
             <nav class="navbar">
                 <ul class="navbar-nav">
-                    <!-- <li class="nav-item dropdown">
-                        <a href="#" class="item-link item-content dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="item-title">
-                                <i class="material-icons">menu</i> Menu
-                            </div>
-                        </a>
-                        <div class="dropdown-menu">
-                            <a href="javascript:void(0)" class="sidebar-close  dropdown-item">
-                             Menu Overlay (This)
-                            </a>
-                            <a href="#" class="sidebar-close dropdown-item menu-right">
-                             Push Content
-                            </a>
-                            <a href="javascript:void(0)" class="sidebar-close dropdown-item popup-open" data-toggle="modal" data-target="#validateModal">
-                             Full Screen
-                            </a>
-                        </div>
-                    </li> -->
                     <li class="nav-item">
                         <a href="index.html" class="sidebar-close">
                             <div class="item-title">
@@ -196,229 +168,6 @@
 
 
         <!-- FULLSCREEN MODALS -->
-
-
-        <!-- FULLSCREEN MODAL 1: WALLET - START -->
-        <div class="modal fade popup-fullmenu" id="walletModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content fullscreen-menu">
-                    <div class="modal-header">
-                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    
-                    <div class="modal-body">
-                        <h2 class="block-title color-dark">O seu passe mensal</h2>
-                        <div class="carosel">
-                            <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="30" data-slides-per-view="1" class="swiper-container swiper-init swipermultiple news-carousel mb-2">
-                                <div class="swiper-pagination"></div>
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="block-slide">
-                                            <figure class="m-0 news-pic">
-                                                
-                                                <img src="img/passes/2.png" alt="" class="w-100" data-toggle="modal" data-target="#purchased">
-                                                <figcaption>Bilhete de Zona Z2</figcaption>
-                                            </figure>
-                                            <div class="card card-data-item">
-                                                <div class="media my-2 px-3">
-                                                    <a data-toggle="modal" data-target="#purchased" class="media-body">
-                                                        <h5 class="mt-1">Compre um bilhete</h5>
-                                                        <p>Sugestão com base na sua localização</p>
-                                                    </a>
-                                                    <a class="like-heart color-blue" data-toggle="modal" data-target="#purchased">
-                                                        <i class="icon material-icons">shopping_cart</i>
-                                                    </a>
-                                                </div>
-                                                <div class="card-footer pt-0">
-                                                    <div class="row">
-                                                        <div class="col-auto">
-                                                            <i class="material-icons text-dark">loyalty</i>
-                                                            <span class="post-seconds">1,25 €</span>
-                                                        </div>
-                                                        <div class="col text-right">
-                                                            <span class="post-seconds"><span>Validade:</span> 28/12/2018</span>
-                                                            <i class="material-icons text-grey">event</i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="block-slide">
-                                            <figure class="m-0 news-pic">
-                                                <img src="img/passes/3.png" alt="" class="w-100">
-                                                <figcaption>Bilhete de Zona D10</figcaption>
-                                            </figure>
-                                            <div class="card card-data-item">
-                                                <div class="media my-2 px-3">
-                                                    <a href="#" class="media-body">
-                                                        <h5 class="mt-1">Compre um bilhete</h5>
-                                                        <p>Sugestão com base na sua última viagem</p>
-                                                    </a>
-                                                    <a class="like-heart color-blue">
-                                                        <i class="icon material-icons">shopping_cart</i>
-                                                    </a>
-                                                </div>
-                                                <div class="card-footer pt-0">
-                                                    <div class="row">
-                                                        <div class="col-auto">
-                                                            <i class="material-icons text-dark">loyalty</i>
-                                                            <span class="post-seconds">2,35 €</span>
-                                                        </div>
-                                                        <div class="col text-right">
-                                                            <span class="post-seconds"><span>Validade:</span> 02/12/2018</span>
-                                                            <i class="material-icons text-grey">event</i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2 class="block-title color-dark">Os seus Passes</h2>
-                        <div class="swiper-wrapper">
-                                    <div class="swiper-slide pt-2">
-                                        <div class="swiper-content-block right-block">
-                                            <p class="">PASSE MENSAL</p>
-                                            <h2>Passe do Metro do Porto</h2>
-                                            <p>Validade: 28/12/2018</p>
-                                            <a href="">Renovar</a>
-                                            <a href="#">Ver histórico de utilização</a>
-                                            
-                                            
-
-                                            <div class="spliter"></div>
-                                            <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal">
-                                                <button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112); width:100%" class="btn btn-success">Validar</button>
-                                            </a>
-                                    
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                        
-                        <h2 class="block-title color-dark">Os seus cartões<a href="#" class="float-right text-grey">Ver tudo</a></h2>
-                        <div class="carosel">
-                            <div data-pagination='{"el": ".swiper-pagination2"}' class="swiper-container swiper-init swipermultiple mostviewed mostviewed2">
-                                <div class="swiper-pagination swiper-pagination2"></div>
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide pt-2">
-                                        <div class="swiper-content-block right-block">
-                                            <a class="like-heart color-blue">1x</a>
-                                                <p class="">ANDANTE 24</p>
-                                            <h2>Bilhete de Zona Z2</h2>
-                                            <p>Validade: 02/09/2019</p>
-                                            <p class="cartoes" id="b1"></p>
-                                            
-                                            <div class="spliter"></div>
-                                            <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
-                                                <button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
-                                            </a>
-                                            <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b1', 'b1', 2)">
-                                                <button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide pt-2">
-                                        <div class="swiper-content-block right-block">
-                                            <a class="like-heart color-blue">2x</a>
-                                                <p class="">ANDANTE AZUL</p>
-                                            <h2>Bilhete de Zona Z3</h2>
-                                            <p>Validade: 02/09/2019</p>
-                                            <p class="cartoes" id="b2"></p>
-                                            <div class="spliter"></div>
-                                            
-                                            <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
-                                                <button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
-                                            </a>
-                                            <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b2', 'b2', 1)">
-                                                <button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide pt-2">
-                                        <div class="swiper-content-block right-block">
-                                            <a class="like-heart color-blue">3x</a>
-                                            <p class="">ANDANTE AZUL</p>
-                                            <h2>Bilhete de Zona Z2</h2>
-                                            <p>Validade: 21/03/2019</p>
-                                            <p class="cartoes" id="b3"></p>
-                                            <div class="spliter"></div>
-                                            <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
-                                                <button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
-                                            </a>
-                                            <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b3', 'b3', 1)">
-                                                <button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide pt-2">
-                                        <div class="swiper-content-block right-block">
-                                            <a class="like-heart color-blue">1x</a>
-                                            <p class="">ANDANTE AZUL</p>
-                                            <h2>Bilhete de Zona Z9</h2>
-                                            <p>Validade: 02/09/2019</p>
-                                            <p class="cartoes" id="b4"></p>
-                                            <div class="spliter"></div>
-                                            <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
-                                                <button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
-                                            </a>
-                                            <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b4', 'b4', 2.5)">
-                                                <button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="swiper-slide pt-2">
-                                        <div class="swiper-content-block right-block">
-                                            <a class="like-heart color-blue">4x</a>
-                                            <p class="">ANDANTE AZUL</p>
-                                            <h2>Bilhete de Zona Z8</h2>
-                                            <p>Validade: 02/09/2019</p>
-                                            <p class="cartoes" id="b5"></p>
-                                            <div class="spliter"></div>
-                                            <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
-                                                <button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
-                                            </a>
-                                            <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b5', 'b5', 2.25)">
-                                                <button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="swiper-slide pt-2">
-                                        <div class="swiper-content-block right-block">
-                                            <a class="like-heart color-blue">1x</a>
-                                            <p class="">ANDANTE TOUR</p>
-                                            <h2>Bilhete de Tour 3</h2>
-                                            <p>Validade: 02/09/2019</p>
-                                            <p class="cartoes" id="b6"></p>
-                                            <div class="spliter"></div>
-                                            <a class="nav-item nav-link publish-tabs-link" href="payment.html" style="float:left; width:47%">
-                                                <button type="button" style="border-radius:10px;" class="btn btn-primary">Comprar</button>					
-                                            </a>
-                                            <a class="nav-item nav-link publish-tabs-link" data-toggle="modal" href="#validateModal" style="float:left; width:47%" onclick="timer('#b6', 'b6', 72)">
-                                                <button type="button" style="border-radius:10px; background: rgb(25,212,112); border-color: rgb(25,212,112);" class="btn btn-success">Validar</button>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- FULLSCREEN MODAL 1: WALLET - END -->
-
-
         <!-- FULLSCREEN MODAL 2: VALIDATE - START -->
         <div class="modal fade popup-fullmenu" id="validateModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -573,7 +322,7 @@
                                                 <figure class="m-0 news-pic">
                                                     <div class="suggestion like-heart"><i class="fas fa-magic"></i><i class="fas fa-map-marker-alt"></i></div>
                                                     <img src="img/passes/2.png" alt="" class="w-100" data-toggle="modal" data-target="#purchased">
-                                                    <figcaption>Bilhete de Zona Z2</figcaption>
+                                                    <figcaption><b>Zona N11</b><br><small>Título Ocasional Sugerido</small></figcaption>
                                                 </figure>
                                                 <div class="card card-data-item">
                                                     <div class="media my-2 px-3">
@@ -606,7 +355,7 @@
                                                 <figure class="m-0 news-pic">
                                                     <div class="suggestion like-heart"><i class="fas fa-magic"></i><i class="fas fa-history"></i></div>
                                                     <img src="img/passes/3.png" alt="" class="w-100" data-toggle="modal" data-target="#purchased2">
-                                                    <figcaption>Bilhete de Zona D10</figcaption>
+                                                    <figcaption><b>Zona N3</b><br><small>Título Ocasional Sugerido</small></figcaption>
                                                 </figure>
                                                 <div class="card card-data-item" id="bilhetesug2">
                                                     <div class="media my-2 px-3">
