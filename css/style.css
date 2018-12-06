@@ -1918,8 +1918,8 @@ body .wrapper .page .footer {
 .ios .media .like-heart,
 .md .media .like-heart,
 .like-heart {
-    height: 24px;
-    width: 24px;
+    height: 45px;
+    width: 45px;
     line-height: 24px;
     vertical-align: middle;
     border-radius: 50%;
@@ -1931,15 +1931,21 @@ body .wrapper .page .footer {
     right: 10px;
     top: 10px;
 }
+.small-like-heart {
+    height: 28px;
+    width: 28px;
+    top: 5px;
+}
 .ios .media .like-heart,
-.md .media .like-heart {
-    margin-top: 8px;
+.md .media .like-heart,
+.like-heart {
+    margin-top: 0px;
 }
 .ios .media .like-heart i,
 .md .media .like-heart i,
 .like-heart i {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 28px;
+    line-height: 46px;
     color: #f44336;
 }
 .image-left-below .swiper-content-block.right-block {
@@ -2710,7 +2716,9 @@ formats search button appropriately
 @keyframes resizeW {
     0% {
         width: 40px;
-    } 40% {
+    } 30% {
+        width: 130px;
+    } 50% {
         width: 130px;
     } 80% {
         width: 40px;
