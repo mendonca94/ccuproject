@@ -2,7 +2,6 @@
 $(document).ready(function () {
 
 
-
     //  redeem button on profile menu
     $("#redeembutton").on('click', function () {
         var value = $('#saldovalue').html();
@@ -54,6 +53,28 @@ $(document).ready(function () {
         var newval = ivalue - 300;
         $('#newvalue').html(newval);
         $('.current-points').html(newval);
+        $('#pointsvalue').html(newval);
+
+
+        var text1 = "<span id=\"nrunitsZ";
+        var text2 = "\" class=\"text-dark\">"
+        var text3 = "</span> unidades";
+
+
+        $('#gencards').show();
+        
+        if ($('#genZ2').css("display") == "none")
+            $('#genZ2').css("display", "flex");
+
+        else {
+            var units = $('#nrunitsZ2').text();
+            var un = parseInt(units);
+            un = un + 1;
+
+            var span = text1 + String(2) + text2 + un + text3;
+            $('#unitsZ2').html(span);
+        }
+
     });
 
     $("#prize2").on('click', function () {
@@ -63,6 +84,25 @@ $(document).ready(function () {
         var newval = ivalue - 700;
         $('#newvalue').html(newval);
         $('.current-points').html(newval);
+        $('#pointsvalue').html(newval);
+
+        var text1 = "<span id=\"nrunitsZ";
+        var text2 = "\" class=\"text-dark\">"
+        var text3 = "</span> unidades";
+
+        $('#gencards').show();
+        
+        if ($('#genZ5').css("display") == "none")
+            $('#genZ5').css("display", "flex");
+        
+        else {
+            var units = $('#nrunitsZ5').text();
+            var un = parseInt(units);
+            un = un + 1;
+
+            var span = text1 + String(5) + text2 + un + text3;
+            $('#unitsZ5').html(span);
+        }
     });
 
     $("#prize3").on('click', function () {
@@ -72,6 +112,11 @@ $(document).ready(function () {
         var newval = ivalue - 1300;
         $('#newvalue').html(newval);
         $('.current-points').html(newval);
+        $('#pointsvalue').html(newval);
+
+
+        $('#ticketoffice').show();
+        
     });
 
     $("#prize4").on('click', function () {
@@ -81,16 +126,15 @@ $(document).ready(function () {
         var newval = ivalue - 1300;
         $('#newvalue').html(newval);
         $('.current-points').html(newval);
+        $('#pointsvalue').html(newval);
+
+        $('#ticketoffice').show();
     });
 
+    $("#prizeredeemclose").on('click', function () {
 
-
-
-
-
-
-
-
+        $('#ticketoffice').hide(700);
+    });
 
 
 
@@ -189,6 +233,7 @@ $(document).ready(function () {
         $('body').addClass('max-demo-frame')
     }
 
+
 });
 
 $(window).on('load', function() {
@@ -226,15 +271,110 @@ function timer(bID, _bID, time){
 
 
 
+function decreaseAmountGen(val){
+    // decrease saldo caused by generated values
+
+    var saldo = $('#saldovalue').html();
+    console.log("saldo");
+    console.log(saldo);
+    var flsaldo = parseFloat(saldo);
+    console.log("flsaldo");
+    console.log(flsaldo);
+    console.log("val");
+    console.log(val);
+    var flval = parseFloat(val);
+    console.log("flval");
+    console.log(flval);
+
+    var newval = flsaldo - flval;
+    console.log(newval);
+
+
+    
+    var formatval = newval.toFixed(2);
+    console.log(formatval);
+    $('#saldovalue').html(formatval);
+    $('.current-saldo').html(formatval);
+
+
+    $('#gencards').show();
+
+    var text1 = "<span id=\"nrunitsZ";
+    var text2 = "\" class=\"text-dark\">"
+    var text3 = "</span> unidades";
+
+    // generating cards bought through map/search function
+    if (val == 1.20) {
+        if ($('#genZ2').css("display") == "none")
+            $('#genZ2').css("display", "flex");
+        else {
+            var units = $('#nrunitsZ2').text();
+            var un = parseInt(units);
+            un = un + 1;
+
+            var span = text1 + String(2) + text2 + un + text3;
+            $('#unitsZ2').html(span);
+        }
+
+    }
+
+    if (val == 1.60) {
+        if ($('#genZ3').css("display") == "none")
+            $('#genZ3').css("display", "flex");
+        else {
+            var units = $('#nrunitsZ3').text();
+            var un = parseInt(units);
+            un = un + 1;
+
+            var span = text1 + String(3) + text2 + un + text3;
+            $('#unitsZ3').html(span);
+        }
+    }
+
+    if (val == 2.40) {
+        if ($('#genZ5').css("display") == "none")
+            $('#genZ5').css("display", "flex");
+        else {
+            var units = $('#nrunitsZ5').text();
+            var un = parseInt(units);
+            un = un + 1;
+
+            var span = text1 + String(5) + text2 + un + text3;
+            $('#unitsZ5').html(span);
+        }
+    }
+
+    if (val == 2.80) {
+        if ($('#genZ6').css("display") == "none")
+            $('#genZ6').css("display", "flex");
+        else {
+            var units = $('#nrunitsZ6').text();
+            var un = parseInt(units);
+            un = un + 1;
+
+            var span = text1 + String(6) + text2 + un + text3;
+            $('#unitsZ6').html(span);
+        }
+    }
+    
+}
+
 function decreaseAmount(val){
+    // decrease saldo
     
     var saldo = $('#saldovalue').html();
-    var flsaldo = parseFloat(saldo);
 
-    var newval = flsaldo - val;
-    console.log(newval);
-    $('#saldovalue').html(newval);
-    $('.current-saldo').html(newval);
+    console.log(saldo);
+    var flsaldo = parseFloat(saldo);
+    var flval = parseFloat(val);
+
+    var newval = flsaldo - flval;
+    
+    var formatval = newval.toFixed(2);
+    $('#saldovalue').html(formatval);
+    $('.current-saldo').html(formatval);
+
+    
 }
 
 
@@ -265,33 +405,41 @@ function searchPath(){
 
     var string1 = "Para o trajecto selecionado, deverá adquirir um título "
     var string2 = ".<br><img src=\""
-    var string3 = "\"><br><br><a data-toggle=\"modal\" data-target=\"#purchasedmap\" class=\"media-body\"><button class=\"mb-4 btn btn-lg btn-success w-100\" onclick=\"decreaseAmount("
-    var string4 = ")\" type=\"button\">Comprar "
-    var string5 = "</button></a>"
-
-
-
-
-
-
-
-
-
+    var string3 = "\"><br><br><a data-toggle=\"modal\" data-target=\"#purchasedmap\" class=\"media-body\"><button class=\"mb-4 btn btn-lg btn-success w-100\" onclick=\"decreaseAmountGen("
+    var string4 = ")\" type=\"button\" id=\"buttongen"
+    var string5 = "\">Comprar "
+    var string6 = "</button></a>"
 
 
     for (var i = 0; i < output.length; i++) {
         
         if (output[i][0] == valueFrom && output[i][1] == valueTo) {
-                result.html(string1 + output[i][2] + string2 + output[i][5] + string3 + output[i][3] + string4 + output[i][4] + string5);
+                result.html(string1 + output[i][2] + string2 + output[i][5] + string3 + output[i][3] + string4 + output[i][2] + string5 + output[i][4] + string6);
                 break;
             }
     }
 
+
+    // check if estadio do dragao challenge has been completed
+    var flag = $('#challengedragao').is(":visible");
+
+    // if not, complete it, add points, update challenges tab
+    if (valueTo == "Estádio do Dragão" && !flag) {
+        $('#challengedragao').hide();
+        $('#completeddragao').show();
+
+        var value = $('#pointsvalue').html();
+        var ivalue = parseInt(value);
+
+        var newval = ivalue + 100;
+        $('#newvalue').html(newval);
+        $('.current-points').html(newval);
+
+        $('#challcompleted').text("3x");
+        $('#challopen').text("1x");
+    }
+
 }
-
-
-
-
 
 
 
@@ -303,9 +451,6 @@ function consultPath(){
 
     var selectorTo = document.getElementById('consultPath_to');
     var valueTo = selectorTo[selectorTo.selectedIndex].value;
-
-    console.log(valueTo);
-    console.log(valueFrom);
 
     var result = $("#consultPath_result");
     // ORIGIN , DESTINATION, TICKET TYPE, PRIZE, PRIZE STR, IMAGE
